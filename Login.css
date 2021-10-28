@@ -84,7 +84,7 @@ input {
     padding: 23px 8px 0 7px;
     text-align: center;
 }
-.button_style1 {
+.loginbutton {
     width: 78%;
     color: #0B14F3;
     font-weight: bold;
@@ -98,8 +98,18 @@ input {
     padding: 12px 20px;
     text-align: center;
     font-family: 'Inika', serif;
+    opacity: 0.8;
+    transition: 0.3s;
 
 }
+.loginbutton:hover {
+    opacity: 1;
+}
+.loginbutton:active{
+    transform: translateY(1.5px);
+    box-shadow: 0 2px #666;
+}
+
 .Log_in_header {
     text-align: center;
     font-size: 14px;
