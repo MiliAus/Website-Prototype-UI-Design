@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap'); /*import style from google API */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap'); /*import style from google API */
+
+
+input {
+    width: 78%;
+    padding: 4px 6px;
+    margin-bottom: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    align-self: center;
+    border: 2px solid #0B14F3;
+}
+
+
+
+
+
+
+.logo{
+     margin-left: auto;
+     margin-right: auto;
+     display: block;
+     width: 100px;
+     height: 100px;
+     margin-top: -10px;
+     margin-bottom: 10px;
+
+}
+.unflogo {
+    font-size: 40px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Oleo Script', cursive;
+    color: #0B14F3;
+    text-shadow: 0 0 3px gray;
+    opacity: 78%;
+    margin-top: 255px;
+
+}
+
+.login_box{
+    border: 6px solid #0B14F3;
+    border-radius: 4px;
+    width: 38%;
+    padding: 12px 20px;
+    margin: auto;
+    display: block;
+    box-sizing: border-box;
+    align-self: center;
+}
+
+.center_box {
+    width: 50%;
+    padding: 12px 20px;
+    margin-left: 82px;
+    margin-right: 0px;
+    display: block;
+    box-sizing: border-box;
+    align-self: center;
+    font-size: 12px;
+}
+.center {
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: 100px;
+    height: 100px;
+    margin-top: 25px;
+}
+.new_customer_header {
+    font-family: Calibri;
+    font-size: 16px;
+    color: black;
+    line-height: 1;
+    font-size: 14px;
+    color: #808080;
+    position: relative;
+    background-color: #fff;
+    padding: 23px 8px 0 7px;
+    text-align: center;
+}
+.button_style1 {
+    width: 78%;
+    color: #0B14F3;
+    font-weight: bold;
+    font-size: large;
+    padding: 12px;
+    margin: auto;
+    border: 2px solid #0B14F3;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    padding: 12px 20px;
+    text-align: center;
+    font-family: 'Inika', serif;
+
+}
+.Log_in_header {
+    text-align: center;
+    font-size: 14px;
+    padding-top: 10px;
+    font-family: 'Oleo Script', cursive;
+}
+
+.field-validation-error {
+    color: #f00;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+.input-validation-error {
+    border: 1px solid #f00;
+    background-color: #fee;
+}
+
+.validation-summary-errors {
+    font-weight: bold;
+    color: #f00;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+.middle{
+    max-width: 925px;
+    padding: 0px 0px 0px 0px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+.login{
+    font-size: 25px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-family: 'Oleo Script', cursive;
+    color: #0B14F3;
+    text-shadow: 0 0 3px gray;
+    opacity: 78%;
+}
+body{
+    background: linear-gradient(135deg,
+        #6066ff,rgb(227, 226, 255));
+    height: auto;
+}
+html{
+    height: 100%;
+}
+
