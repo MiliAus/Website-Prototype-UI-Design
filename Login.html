@@ -2,13 +2,15 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="Login.css">
-		<script src="script.js" async></script>
+		<script src="login.js" async></script>                          <!-- NEED A LOGIN.js for validation-->
         <title>Login</title>
+        <meta name="viewport" content="width=device-width", initial-scale=1.0">
         
     </head>
 
 
     <body>
+    <!-- <form onSubmit="return validateLogin();">   -->       <!-- NEED A LOGIN.js for validation-->
     <div class="middle">
     <h1 class="unflogo">UNFinished Business</h1>
     <div class="login_box">
@@ -22,9 +24,14 @@
 
 
     <input type="password"  placeholder="Password" />
-
-    <button type="submit" class="loginbutton">Log In</button>
+    
+    
+    
+    <button type="submit" onclick="location.href='//C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html';" class="loginbutton">Log In</button>     <!-- Change to your path-->
+   
     </div>
+    </div>
+    </form>
 
 
 
