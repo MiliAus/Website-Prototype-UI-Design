@@ -125,7 +125,7 @@ body{
     hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),
     radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, 
     hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),
-    linear-gradient(135deg, rgb(37, 56, 222),rgb(96, 189, 244));
+    linear-gradient(135deg, rgb(26, 48, 245),rgb(109, 198, 250));
     height: auto;
 }
 html{
