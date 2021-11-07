@@ -1,0 +1,104 @@
+label.date {
+    width: 140px;
+    float: left;
+    text-align: left;
+}
+
+label.name {
+	width: 100px;
+	float: left;
+	text-align: left;
+}
+
+label.sname {
+	width: 200px;
+	float: left;
+	text-align: left;
+}
+
+label.address {
+    width: 115px;
+    float: left;
+    text-align: left;
+}
+
+label.eaddress {
+    width: 150px;
+    float: left;
+    text-align: left;
+}
+
+label.contact {
+    width: 180px;
+    float: left;
+    text-align: left;
+}
+
+label.misc {
+    width: 120px;
+    float: left;
+    text-align: left;
+}
+
+label.emisc {
+    width: 140px;
+    float: left;
+    text-align: left;
+}
+
+label.tmisc {
+    width: 325px;
+    float: left;
+    text-align: left;
+}
+
+label.employ {
+    width: 90px;
+    float: left;
+    text-align: left;
+}
+
+p.position {
+    padding-left: 120px;
+    font-size: 10px;
+    color: red;
+}
+
+p:hover {
+    font-size: 150%;
+}
+
+.table1 {
+	border: 1px solid white;
+	border-collapse: collapse;
+	text-align: left;
+}
+
+.td1 {
+	border: 1px solid white;
+	text-align: left;
+    padding: 10px;
+}
+
+label.table1 {
+    width: 40px;
+    float: left;
+}
+
+.td2 {
+	border: 1px solid white;
+	text-align: left;
+    padding: 10px;
+}
+
+label.table2 {
+    width: 125px;
+    float: left;
+}
+
+div {
+    padding-left: 15px;
+}
+
+
+
