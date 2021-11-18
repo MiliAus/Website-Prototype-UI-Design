@@ -1,22 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <link rel="stylesheet" href="PrototypeFrame.css">
-		<script src="script.js" async></script>
+        <link rel="stylesheet" href="PrototypeFrame.css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="script.js" async></script>
         <title>Prototype Frame</title>
         
+       
     </head>
     <body>
 
-        <!-- Application Date -->
-        <label class="date" for="application"><b>Application Date:</b></label>
-			<input type="date" id="application" name="application"  value="2021-01-01"
-				min="2021-01-01" max="2025-12-31" readonly> <br><br>
+       
+         
 
-        <form onSubmit="return validateForm();">
+<!-- ****************************  Sticky Navbar  ********************************************************************************** --> 
+<div class="navbar">
+            <a href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#1">Personal Information</a>
+            <a href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#2">Work Experience</a>
+            <a href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#3">Education Experience</a>
+            <a href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#4">Miscellaneous</a>
+            <a href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#5">Applicant Acknowledgement&Waiver</a>
+        </div>
+</div>
+<br>
+<br>
 
+
+<form onSubmit="validateForm(); return false"></form>
+<div> 
+  
 <!-- ****************************  Personal Information Section  ********************************************************************************** -->   
-        <h2><u>Personal Information Section</u></h2>    
+
+        
+        <h2><u>Personal Information Section</u></h2>
+        <a class="anchor" id="1"></a> 
+
+         <!-- Application Date -->
+        <label class="date" for="application"><b>Date:</b></label>
+			<input disabled type="text" id="application" name="application"
+			> <br><br>   
+                
+                
             <!-- Applicant Name -->
             <fieldset>
                 <legend><b>Name:*</b></legend>
@@ -228,7 +253,9 @@
 
 
 <!-- ****************************  Work Experience Section  ********************************************************************************** -->   
+        
         <h2><u>Work Experience Section</u></h2>
+        <a class="anchor" id="2"></a>
 
             <!-- Employer's Information -->
             <fieldset>
@@ -359,6 +386,7 @@
 
 <!-- ****************************  Education Experience Section  ********************************************************************************** -->      
         <h2><u>Education Experience Section</u></h2>
+        <a class="anchor" id="3"></a>
 
             <!-- Highest Education Achieved -->
             <label style="padding-right: 10px" for="higered">Highest education you have achieved:*</label>
@@ -459,6 +487,7 @@
 <!-- ****************************  Miscellaneous Section  ********************************************************************************** -->   
            
         <h2><u>Miscellaneous Section</u></h2>
+        <a class="anchor" id="4"></a>
 
             <!-- Workday Availability Field -->
             <fieldset>
@@ -736,6 +765,7 @@
 
             <!-- Applicant Acknowledgement and Waiver Section  -->
             <h2><u>Applicant Acknowledgement and Waiver Section</u></h2>
+            <a class="anchor" id="5"></a>
             <fieldset>
                 <legend><b>PLEASE READ CAREFULLY AND SELECT 'I AGREE'</b></legend>
                 <p>IN EXCHANGE FOR THE CONSIDERATION OF MY JOB APPLICATION BY UNFINISHED BUSINESS, I AGREE THAT:</p>
@@ -765,6 +795,38 @@
         </form> 
         
         <br><br>
-
+    </div>
     </body>
 </html>
+<!-- SPACES -->
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,8 +1,17 @@
 function setDate() {                   //Function works and is complete
     const today = new Date();
-    todays_date = date.toLocaleDateString();
+    todays_date = today.toLocaleDateString();
     
     
-     alert("helllloo");
+     document.getElementById("application").value = todays_date;
     
 }//end validateDate
+
+//navbar////////////////////////////////////////////////////////////////
+
+
+  
+
+setDate();
+
+
