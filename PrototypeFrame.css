@@ -106,7 +106,21 @@ div {
 /* NAVBAR CSS */
 .navbar {
   overflow: hidden;
-  background-color: #3498db;
+  background-image: radial-gradient(circle at 85% 1%, 
+    hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),
+    radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),
+    radial-gradient(circle at 60% 90%, 
+    hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),
+    radial-gradient(circle at 79% 7%, 
+    hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),
+    radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),
+    linear-gradient(135deg, rgb(26, 48, 245),rgb(109, 198, 250));
+    height: auto;
   position: fixed;
   top: 0;
   width: 100%;
@@ -114,10 +128,6 @@ div {
 .navbar a:hover {
   background-color: #ddd;
   color: black;
-}
-.navbar a.active {
-  background-color: #0f04aa;
-  color: white;
 }
 .navbar a {
   float: left;
@@ -133,4 +143,7 @@ a.anchor {
   position: relative;
   top: -90px; /* this is your offset */
   visibility: hidden;
+}
+a.active{
+  background-color: lightskyblue
 }
