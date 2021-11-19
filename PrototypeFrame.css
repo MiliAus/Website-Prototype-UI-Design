@@ -129,7 +129,7 @@ div {
   background-color: #ddd;
   color: black;
 }
-.navbar a {
+.navbar #item {
   float: left;
   display: block;
   color: #f2f2f2;
@@ -143,7 +143,4 @@ a.anchor {
   position: relative;
   top: -90px; /* this is your offset */
   visibility: hidden;
-}
-a.active{
-  background-color: lightskyblue
 }

@@ -9,9 +9,9 @@ function setDate() {                   //Function works and is complete
 
 //navbar////////////////////////////////////////////////////////////////
 
-
   
 
 setDate();
+
 
 
