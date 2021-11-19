@@ -29,7 +29,7 @@
     text-align: center;
     font-family: 'Oleo Script', cursive;
     color: #0B14F3;
-    text-shadow: 0 0 3px gray;
+    text-shadow: 0 0 10px #d7d4d4;
     opacity: 78%;
     margin-top: 255px;
 
@@ -113,8 +113,9 @@
     margin-bottom: 30px;
     text-align: center;
     font-family: 'Oleo Script', cursive;
+    text-shadow: 0 0 10px #d7d4d4;
+    opacity: 78%;
     color: #0B14F3;
-    text-shadow: 0 0 3px gray;
     opacity: 78%;
 }
 body{
@@ -137,4 +138,3 @@ body{
 html{
     height: 100%;
 }
-
