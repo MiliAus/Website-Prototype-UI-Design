@@ -1,7 +1,9 @@
-label.date {
-    width: 140px;
-    float: left;
-    text-align: left;
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap'); /*import style from google API */
+@import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap'); /*import style from google API */
+
+
+.employ{
+    text-align: right;
 }
 
 label.name {
@@ -60,13 +62,11 @@ label.employ {
 
 p.position {
     padding-left: 120px;
-    font-size: 10px;
+    font-size: 17px;
     color: red;
+    max-width: 300px;
 }
 
-p:hover {
-    font-size: 150%;
-}
 
 .table1 {
 	border: 1px solid white;
@@ -99,6 +99,48 @@ label.table2 {
 div {
     padding-left: 15px;
 }
+.table2{
+    border: 1px solid black;
+}
 
-
-
+/* NAVBAR CSS */
+.navbar {
+  overflow: hidden;
+  background-image: radial-gradient(circle at 85% 1%, 
+    hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 96%,transparent 96%, transparent 100%),
+    radial-gradient(circle at 14% 15%, hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 1%,transparent 1%, transparent 100%),
+    radial-gradient(circle at 60% 90%, 
+    hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 20%,transparent 20%, transparent 100%),
+    radial-gradient(circle at 79% 7%, 
+    hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 78%,transparent 78%, transparent 100%),
+    radial-gradient(circle at 55% 65%, hsla(190,0%,93%,0.05) 0%, 
+    hsla(190,0%,93%,0.05) 52%,transparent 52%, transparent 100%),
+    linear-gradient(135deg, rgb(26, 48, 245),rgb(109, 198, 250));
+    height: auto;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+.navbar a:hover {
+  background-color: #ddd;
+  color: black;
+}
+.navbar #item {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+a.anchor {
+  display: block;
+  position: relative;
+  top: -90px; /* this is your offset */
+  visibility: hidden;
+}
