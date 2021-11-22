@@ -1,6 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap'); /*import style from google API */
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap'); /*import style from google API */
 
+body {
+    background-color: #F6FCFF;
+}
 
 .employ{
     text-align: right;
@@ -60,11 +63,21 @@ label.employ {
     text-align: left;
 }
 
+p.alert{
+    font-size: 20px;
+    color: red;
+    font-weight: bold;
+}
+
 p.position {
     padding-left: 120px;
-    font-size: 17px;
+    font-size: 9px;
     color: red;
     max-width: 300px;
+}
+
+p.position:hover {
+    font-size: 18px;
 }
 
 
@@ -100,7 +113,7 @@ div {
     padding-left: 15px;
 }
 .table2{
-    border: 1px solid black;
+    border: 1px solid white;
 }
 
 /* NAVBAR CSS */
@@ -141,6 +154,6 @@ div {
 a.anchor {
   display: block;
   position: relative;
-  top: -90px; /* this is your offset */
+  top: -100px; /* this is your offset */
   visibility: hidden;
 }
