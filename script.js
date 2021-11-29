@@ -9,332 +9,104 @@ function setDate() {                   //Function works and is complete
     
 }//end validateDate
 
-//navbar////////////////////////////////////////////////////////////////
 
+function testNumber(value){      //Function works and is complete
+	
+	if(isNaN(value)){  //if not a number
+        return false;
+    }
+    else{              //if a number
+        return true;
+    }
+	
+}//end testNumber
+function testLength(value, length){  //Function works and is complete
   
 
-setDate();
+	if(value == length){
+		return true;
+	}
+	else{
+		return false;
+	}
+ } //testLength
 
-function validateForm() {
+function validateControl(control, name, length){ //Function works and is complete
+    con_len = control.length;
+    
+	 if(testLength(con_len,length) == false){
+         alert(name+" is the incorrect length. Please type again.");
+         return false;
+     }
+     if((testLength(con_len,length) == true) && (testNumber(control) == false)){
+        alert(name+" is not a number. Please type again.");
+        return false;
+     }
+     else{
+         return true;
+     }
+     
 	
-	var valid = false;
-	
-	/* Applicant Name */
-	let afirst = document.getElementById("afirst");
-	let amiddle = document.getElementById("amiddle");
-	let alast = document.getElementById("alast");
-	
-	if (afirst.value == "") {
-		alert("Applicant's First Name is missing");
-		return false; }
-	
-	if (isNaN(afirst.value) == false) {
-		alert("Applicant's First Name must contain only letters");
-		return false; }
-	
-	if (isNaN(amiddle.value) == false) {
-		alert("Applicant's Middle Name must contain only letters");
-		return false; }
-	
-	if (alast.value == "") {
-		alert("Applicant's Last Name is missing");
-		return false; }
-	
-	if (isNaN(alast.value) == false) {
-		alert("Applicant's Last Name must conatin only letters");
-		return false; }
-	
-	
-	/* Applicant Address */
-	let astreet = document.getElementById("astreet");
-	let acity = document.getElementById("acity");
-	var astate = document.getElementById("astate");
-	let azip = document.getElementById("azip");
-	var ayears = document.getElementById("ayears');
-	var amonths = document.getElementById("amonths);
-		
-	if (astreet.value == "") {
-		alert("Applicant's Street Address is missing");
-		return false; }
-	
-	if (acity.value == "") {
-		alert("Applicant's City name is missing");
-		return false; }
-	
-	if (isNaN(acity.value) == false) {
-		alert("Applicant's City must contain only letters");
-		return false; }
-	
-	valid = validateSelection(astate.selectedIndex); 
-	if (valid === false) {
-		alert("Select a State for Applicant's address");
-		return false; }
-	
-	if (azip.value == "") {
-		alert("Applicant's ZIP is missing");
-		return false; }
-		
-	if (isNaN(azip) == true) {
-		alert("Applicant's ZIP must contian only numbers");
-		return false; }
-	
-	valid = validateTime(ayears.selectedIndex);
-	if (valid === false) {
-		alert("Number of years Applicant has lived at current address not selected");
-		return false; }
-	
-	valid = validateTime(amonths.selectedIndex);
-	if (valid === false) {
-		alert("Number of months Applicant has lived at current address not selected");
-		return false; }
-		
-	
-	/* Appicant Age */
-    var aage = document.getElementById("aage");
-	
-	if (aage === true || aage === false) {
-		alert("Response to 'Are you at least 18 years of age' not selected");
-		return false; }
-	
-	
-	/* Applicant Contact Information */
-	let primary = document.getElementById("primary");
-	let secondary = document.getElementById("secondary");
-	let aemail = document.getElementById("aemail");
-		
-	if (primary.value =="") {
-		alert("Applicant's Primary phone number is missing");
-		return false; }
-	
-	valid = validatePhone(primary);
-	if (valid === fasle) {
-		return false; }		
-	
-	
-	if (aemail.value == "") {
-		alert("Applicant's Email address is missing");
-		return false; }
-	
-	valid = validateEmail(aemail);
-	if (valid === false) {
-		alert("Applicant's Email address invalid");
-		return false; }
-	
-	
-	/* Position and Salary */
-	var position = document.getElementById("position");
-	let salary = document.getElementById("salary");
-	
-	valid = validateSelection(position.selectedIndex); 
-	if (valid === false) {
-		alert("Position applying for not selected");
-		return false; }
-	
-	if (salary.value == "") {
-		alert("Desired salary is missing");
-		return false; }
-	
-	if (isNaN(salary.value) == false) {
-		alert("Desired salary must contain only numbers");
-		return false; }
-		
-	
-	/* Applicant Name */
-	let employer = document.getElementById("employer");
-	
-	if (employer.value == "") {
-		alert("Employer's Name is missing");
-		return false; }
-	
-	if (isNaN(employer.value) == false) {
-		alert("Employer's Name must contain only letters");
-		return false; }
-	
-	/* Applicant Address */
-	let estreet = document.getElementById("astreet");
-	let ecity = document.getElementById("acity");
-	var estate = document.getElementById("astate");
-	let ezip = document.getElementById("azip");
-		
-	if (estreet.value == "") {
-		alert("Applicant's Street Address is missing");
-		return false; }
-	
-	if (ecity.value == "") {
-		alert("Applicant's City name is missing");
-		return false; }
-	
-	if (isNaN(ecity.value) == false) {
-		alert("Applicant's City must contain only letters");
-		return false; }
-	
-	valid = validateSelection(estate.selectedIndex); 
-	if (valid === false) {
-		alert("Select a State for Applicant's address");
-		return false; }
-	
-	if (ezip.value == "") {
-		alert("Applicant's ZIP is missing");
-		return false; }
-		
-	if (isNaN(ezip) == true) {
-		alert("Applicant's ZIP must contian only numbers");
-		return false; }
+} //end validateControl
 
+function validateEmail(value){ //Function works and is complete
+	
+	const reg = /([a-z\d\-\.\+\/\!\%]+)@([a-z\d\-]+)\.([a-z]+).?([a-z]+)?$/i;
+	
+    
+    if(reg.test(value) == true){   //if it passes and is a valid email
+        return true;
+    }
+    else{
+        alert("Email Address is incorrect. Please try again.");
+        return false;
+    }
+
+
+}//end validateEmail
+function ischecked(value){
+	
+	console.log(value.checked);
+	
+	if(value.checked == true){
+		return true;
+	}
+	else{
+		return false;
+	} 
+	
+}
+
+
+
+
+setDate(); //set the date for the form to be todays date
+
+function validateForm(){           /* MAKE THIS THE LAST FUNCTION CALL ALL SUB FUNCTIONS IN THIS ONE */
 	
 	
+	if(validateControl(document.getElementById("azip").value, "Zip", 5) == true)
+		alert("zip is good");
+	if(validateEmail(document.getElementById("aemail").value) == true)
+		alert("email is good");
 	
-	
-	
+	//checking 18 years old is checked//Complete
+	if((ischecked(document.getElementById("aage1")) == true) || (ischecked(document.getElementById("aage2")) == true)){
+		alert("checked is good");
+	}
+	else{
+		alert("Are you at least 18 years of age:* is not checked.\n\n Please check before submitting.");
+	}
+
 	
 	
 	return false;
-}
-
-
-function validateSelection(value) {
-	if (value == "0") {
-		return false; }
-
-	return true; 
-}
-
-
-function validateTime(value) {
-	if (value == "-1") {
-		return false; }
-	
-	return true;
-}
-
-
-function validatePhone(value) {
-	let testNum = value.value.replace(/-/g, "");
-	testNum = testNum.replace(/ /g, "");
-		
-	if (isNaN(testNum) == true) {
-		alert(value.name + "Invalid, must contain only numbers");
-		return false;
-	} else if (testNum.length > 10 {
-		alert(value.name + "Invallid, must be 10 numbers long");
-		return false; }	
-
-	return true;
-}
-
-
-function validateEmail(value) {
-	let email = value.value;
-	let reg = /\w+@\w+.\w+/;
-	return reg.test(email);
-
-	return true;
-}
-
-
-
-
-
-	
-	
-	validation = validateControl(zip,zip.name,5);
-	if (validation === false) {
-		return false; }
-
-
-
-	if (cardName.value == "") {
-		alert("Name on Card field empty.");
-		return false; }
-		
-	if (isNaN(cardName.value) == false) {
-		alert("Invalid Name on Card");
-		return false; }
 	
 
 
 
-	
-	validation = validateControl(cvv, cvv.name, 3);
-	if (validation === false) {
-		return false; }
-	
-	validation = validateState(state.selectedIndex); 
-	if (validation === false) {
-		return false; }
-
-	validation = validateDate(expiration);
-	if (validation === false){
-		return false; }
-
-	if (validation === true) {
-		alert("Form submitted");
-		return false; }
-
-	return false; 
-}
-
-function validateState(value) {
-	if (value == "0") {
-		return false; }
-
-	return true; 
-}
-
-function validateTime(value) {
-	if (value == "-1") {
-		return false; }
-	
-	return true;
-}
 
 
-function testLength(value, length) {
-	let testlen = value.value.replace(/-/g, "");
-	testlen = testlen.replace(/ /g, "");
 
-	if (testlen.length != length) {
-		alert(value.name + " may only be " + length + " characters long");
-		return false; }	
-	
-	return true;
-}
-
-
-function testNumber(value) {
-	let testNum = value.value.replace(/-/g, "");
-	testNum = testNum.replace(/ /g, "");
-	
-	if (isNaN(testNum) == true) {
-		alert(value.name + " may only be numbers");
-		return false; }
-
-	return true;
-}
-
-
-function validateControl(control, name, length) {
-	let conlen = testLength(control, length);
-	if (conlen == false) {
-		return false; }
-
-	contest = testNumber(control);
-	if (contest == false){
-		return false; }
-	
-	return true; 
-}
-
-
-function validateDate(value) {
-	selected = value.value;
-	date = '2021-09'; 
-
-	if (selected <= date) {
-		alert("Credit Card is expired");
-		return false; }
-
-	return true;
-}
-
+}//end validateForm
 

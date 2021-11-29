@@ -157,3 +157,15 @@ a.anchor {
   top: -100px; /* this is your offset */
   visibility: hidden;
 }
+.asterisk{
+    content:" *";
+    color: red;
+}
+label[for="afirst"]:after,[for="alast"]:after,[for="astreet"]:after,[for="primary"]:after,[for="aemail"]:after,[for="higered"]:after,[for="degrees"]:after,[for="dlstate"]:after{
+    content:" *";
+    color: red;
+}
+legend[for="18"]:after,[for="position"]:after,[for="employer"]:after,[for="supervisor"]:after,[for="employment"]:after,[for="ed"]:after,[for="work"]:after,[for="transport"]:after,[for="mil"]:after,[for="read"]:after{
+    content:" *";
+    color: red;
+}
