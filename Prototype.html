@@ -16,11 +16,11 @@
 
 <!-- ****************************  Sticky Navbar  ********************************************************************************** --> 
 <div class="navbar">
-            <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#pi">Personal Information</a>
-            <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#we">Work Experience</a>
-            <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#ee">Education Experience</a>
-            <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#misc">Miscellaneous</a>
-            <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Prototype.html#aa">Applicant Acknowledgement&Waiver</a>
+            <a id="item" href="#pi">Personal Information</a>
+            <a id="item" href="#we">Work Experience</a>
+            <a id="item" href="#ee">Education Experience</a>
+            <a id="item" href="#misc">Miscellaneous</a>
+            <a id="item" href="#aa">Applicant Acknowledgement&Waiver</a>
             <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a>
 </div>
 <br>
@@ -39,33 +39,40 @@
          <!-- Application Date -->
         <label class="date" for="application"><b>Date:</b></label>
 			<input disabled type="text" id="application" name="application"
-			> <br><br>   
+			> <br><br>
+        
+        <p class="alert">All sections with an (*) in the legend name are required, and all associated fields must be
+            filled in prior to submission.  If a section does not have an asterisk (*) in the legend name,
+            then all fields in that section with an asterisk (*) are the only required fields in that section
+            and must be filled in prior to submission.  Submission of an incomplete application will be considered
+            disqualifying.
+        </p><br>
                 
                 
             <!-- Applicant Name -->
             <fieldset>
-                <legend><b>Name:*</b></legend>
-                <label class="name" for="first">First Name:</label>
-                <input type="text" id="first" name="first" placeholder="First" required><br><br>
+                <legend><b>Name:</b></legend>
+                <label class="name" for="afirst">First Name:*</label>
+                <input type="text" id="afirst" name="afirst" placeholder="First" maxlength="35" required><br><br>
 
-                <label class="name" for="middle">Middle Name:</label>
-                <input type="text" id="middle" name="middle" placeholder="Middle"><br><br>
+                <label class="name" for="amiddle">Middle Name:</label>
+                <input type="text" id="amiddle" name="amiddle" placeholder="Middle" maxlength="35"><br><br>
             
-                <label class="name" for="last">Last Name:</label>
-                <input type="text" id="last" name="last" placeholder="Last" required>
+                <label class="name" for="alast">Last Name:*</label>
+                <input type="text" id="alast" name="alast" placeholder="Last" maxlength="35" required>
             </fieldset> <br>          
             
             <!-- Applicant Address -->
             <fieldset>
-                <legend><b>Home Address:*</b></legend>
-                <label class="address" for="street">Street Address:</label>
-                <input type="text" id="street" name="street" placeholder="Street" required><br><br>
+                <legend><b>Current Home Address:*</b></legend>
+                <label class="address" for="astreet">Street Address:</label>
+                <input type="text" id="astreet" name="astreet" placeholder="Street" maxlength="50" required><br><br>
             
-                <label class="address" for="city">City:</label>
-                <input type="text" id="city" name="city" placeholder="City" required><br><br>
+                <label class="address" for="acity">City:</label>
+                <input type="text" id="acity" name="acity" placeholder="City" maxlength="35" required><br><br>
 
-                <label class="address" for="state">State:</label>
-                <select id="state" name="state" required>
+                <label class="address" for="astate">State:</label>
+                <select id="astate" name="astate" required>
                     <option value="selectstate">Select a State</option>
                     <option value="alabama">Alabama</option>
                     <option value="alaska">Alaska</option>
@@ -119,12 +126,12 @@
                     <option value="wyoming">Wyoming</option>
                 </select><br><br>
             
-                <label class="address" for="zip">ZIP:</label>
-                <input type="text" id="zip" name="zip" placeholder="ZIP" required><br><br>
+                <label class="address" for="azip">ZIP:</label>
+                <input type="text" id="azip" name="azip" placeholder="ZIP" maxlength="5" required><br><br>
 
                 <label class="">How long have you live at your current address:</label><br>
-                <label style="padding-left: 10px; padding-right: 10px" for="years">Years:</label>
-                <select id="years" name="years" required>
+                <label style="padding-left: 10px; padding-right: 10px" for="ayears">Years:</label>
+                <select id="ayears" name="ayears" required>
                     <option value="-1">Years</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -177,10 +184,60 @@
                     <option value="48">48</option>
                     <option value="49">49</option>
                     <option value="50">50</option>
+                    <option value="51">51/option>
+                    <option value="52">52</option>
+                    <option value="53">53</option>
+                    <option value="54">54</option>
+                    <option value="55">55</option>
+                    <option value="56">56</option>
+                    <option value="57">57</option>
+                    <option value="58">58</option>
+                    <option value="59">59</option>
+                    <option value="60">60</option>
+                    <option value="61">61</option>
+                    <option value="62">62</option>
+                    <option value="63">63</option>
+                    <option value="64">64</option>
+                    <option value="65">65</option>
+                    <option value="66">66</option>
+                    <option value="67">67</option>
+                    <option value="68">68</option>
+                    <option value="69">69</option>
+                    <option value="70">70</option>
+                    <option value="71">71</option>
+                    <option value="72">72</option>
+                    <option value="73">73</option>
+                    <option value="74">74</option>
+                    <option value="75">75</option>
+                    <option value="76">76</option>
+                    <option value="77">77</option>
+                    <option value="78">78</option>
+                    <option value="79">79</option>
+                    <option value="80">80</option>
+                    <option value="81">81</option>
+                    <option value="82">82</option>
+                    <option value="83">83</option>
+                    <option value="84">84</option>
+                    <option value="85">85</option>
+                    <option value="86">86</option>
+                    <option value="87">87</option>
+                    <option value="88">88</option>
+                    <option value="89">89</option>
+                    <option value="90">90</option>
+                    <option value="91">91</option>
+                    <option value="92">92</option>
+                    <option value="93">93</option>
+                    <option value="94">94</option>
+                    <option value="95">95</option>
+                    <option value="96">96</option>
+                    <option value="97">97</option>
+                    <option value="98">98</option>
+                    <option value="99">99</option>
+
                 </select>
 
-                <label style="padding-left: 10px; padding-right: 10px" for="months">Months:</label>
-                <select id="months" name="months" required>
+                <label style="padding-left: 10px; padding-right: 10px" for="amonths">Months:</label>
+                <select id="amonths" name="amonths" required>
                     <option value="-1">Months</option>
                     <option value="0">0</option>
                     <option value="1">1</option>
@@ -201,10 +258,10 @@
             <fieldset>
                 <legend><b>Are you at least 18 years of age:*</b></legend>
                 <label class="rb">Yes</label>           
-                <input type="radio" id="yes" name="age" value="Yes">
+                <input type="radio" id="aage" name="aage" value="Yes">
                 <span class="rbcheck"></span>
                 <label class="rb">No</label>
-                <input type="radio" id="no" name="age" value="No">
+                <input type="radio" id="aage" name="aage" value="No">
                 <span class="rbcheck"></span>
             </fieldset><br>
 
@@ -214,20 +271,20 @@
 
                 <!-- Applicant Phone Numbers -->
                 <label class="contact" for="primary">Primary Phone Number:*</label>
-                <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" required>
+                <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" maxlength="14" required>
                 <br><br>
                 <label class="" for="primarymobile">Check if this is a mobile number:</label>
                 <input type="checkbox" id="primarymobile" name="primarymobile">
                 <br><br>
 
                 <label class="contact" for="secondary">Secondary Phone Number:</label>
-                <input type="text" id="secondary" name="secondary" placeholder="Secondary [XXX-XXX-XXXX]"><br><br>
+                <input type="text" id="secondary" name="secondary" placeholder="Secondary [XXX-XXX-XXXX]" maxlength="14"><br><br>
                 <label class="" for="secondarymobile">Check if this is a mobile number:</label>
                 <input type="checkbox" id="secondarymobile" name="secondarymobile"><br><br>
 
                 <!-- Applicant Email -->
-                <label class="contact" for="email">Email Address:*</label>
-                <input type="text" id="email" name="email" placeholder="username@mail.com" required>
+                <label class="contact" for="aemail">Email Address:*</label>
+                <input type="text" id="aemail" name="aemail" placeholder="username@mail.com" maxlength="50" required>
             </fieldset> <br>
 
             
@@ -238,7 +295,7 @@
                 <!-- Position -->
                 <label class="misc" for="position">Position:</label>
                 <select id="position" name="position" required>
-                    <option value="-1">Select a Position</option>
+                    < <option value="selectposition">Select a Position</option>
                     <option value="it">IT Specialist</option>
                     <option value="network">Network Administrator</option>
                     <option value="software">Software Developer</option>
@@ -247,7 +304,7 @@
 
                 <!-- Desired Salary -->
                 <label class="misc" for="salary">Desired Salary: $</label>
-                <input type="text" id="salary" name="salary" placeholder="Desired Salary" required>
+                <input type="text" id="salary" name="salary" placeholder="Desired Salary" maxlength="7" required>
                 <p class="position">Whole number only, no spaces or commas</p>
             </fieldset> <br>
 
@@ -263,17 +320,17 @@
 
                 <!-- Employer Name -->
                 <label class="eaddress" for="employer">Employer's Name:</label>
-                <input type="text" id="employer" name="employer" placeholder="Employer Name" required><br><br>
+                <input type="text" id="employer" name="employer" placeholder="Employer Name" maxlength="50" required><br><br>
 
                 <!-- Employer Address -->
-                <label class="eaddress" for="employerstreet">Employer's Address:</label>
-                <input type="text" id="employerstreet" name="employerstreet" placeholder="Employer's Street Address" required><br><br>
+                <label class="eaddress" for="estreet">Employer's Address:</label>
+                <input type="text" id="estreet" name="estreet" placeholder="Employer's Street Address" required><br><br>
             
-                <label class="eaddress" for="employercity">City:</label>
-                <input type="text" id="employercity" name="employercity" placeholder="Employer's City" required><br><br>
+                <label class="eaddress" for="ecity">City:</label>
+                <input type="text" id="ecity" name="ecity" placeholder="Employer's City" required><br><br>
 
-                <label class="eaddress" for="employerstate">State:</label>
-                <select id="employerstate" name="employerstate" required>
+                <label class="eaddress" for="estate">State:</label>
+                <select id="estate" name="estate" required>
                     <option value="selectstate">Select a State</option>
                     <option value="alabama">Alabama</option>
                     <option value="alaska">Alaska</option>
