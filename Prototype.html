@@ -4,8 +4,8 @@
         <link rel="stylesheet" href="PrototypeFrame.css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="script.js" async></script>
-        <title>UNFinished Business Job Application</title>
+        <script src="script.js" ></script>
+        <title>Prototype Frame</title>
         
        
     </head>
@@ -21,810 +21,809 @@
             <a id="item" href="#ee">Education Experience</a>
             <a id="item" href="#misc">Miscellaneous</a>
             <a id="item" href="#aa">Applicant Acknowledgement&Waiver</a>
-            <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a>
+           <!--  <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a> -->
 </div>
 <br>
 <br>
+<br>
 
 
-<form onSubmit="validateForm();">
-<div> 
-  
+
+<form onSubmit="validateForm(); return false">
 <!-- ****************************  Personal Information Section  ********************************************************************************** -->   
 
+ <!-- Application Date -->
+<label class="date" for="application"><b>Date:</b></label>
+    <input disabled type="text" id="application" name="application"> <br><br>
+
+<p class="alert">All sections with an (*) in the legend name are required , and all associated fields must be
+    filled in prior to submission.  If a section does not have an asterisk (*) in the legend name,
+    then all fields in that section with an asterisk (*) are the only required fields in that section
+    and must be filled in prior to submission.  Submission of an incomplete application will be considered
+    disqualifying.
+</p><br>
         
-        <h2><u>Personal Information Section</u></h2>
-        <a class="anchor" id="pi"></a> 
-
-         <!-- Application Date -->
-        <label class="date" for="application"><b>Date:</b></label>
-			<input disabled type="text" id="application" name="application"
-			> <br><br>
         
-        <p class="alert">All sections with an (*) in the legend name are required, and all associated fields must be
-            filled in prior to submission.  If a section does not have an asterisk (*) in the legend name,
-            then all fields in that section with an asterisk (*) are the only required fields in that section
-            and must be filled in prior to submission.  Submission of an incomplete application will be considered
-            disqualifying.
-        </p><br>
-                
-                
-            <!-- Applicant Name -->
-            <fieldset>
-                <legend><b>Name:</b></legend>
-                <label class="name" for="afirst">First Name:</label>
-                <input type="text" id="afirst" name="afirst" placeholder="First" maxlength="35" value="John" required><br><br>
+    <!-- Applicant Name -->
 
-                <label class="name" for="amiddle">Middle Name:</label>
-                <input type="text" id="amiddle" name="amiddle" placeholder="Middle" maxlength="35"><br><br>
-            
-                <label class="name" for="alast">Last Name:</label>
-                <input type="text" id="alast" name="alast" placeholder="Last" maxlength="35" value="Smith"required>
-            </fieldset> <br>          
-            
-            <!-- Applicant Address -->
-            <fieldset>
-                <legend><b>Current Home Address:</b></legend>
-                <label class="address" for="astreet">Street Address:</label>
-                <input type="text" id="astreet" name="astreet" placeholder="Street" maxlength="50" value="1000 Apple Street"required><br><br>
-            
-                <label class="address" for="acity">City:</label>
-                <input type="text" id="acity" name="acity" placeholder="City" maxlength="35" value="Jacksonville"required><br><br>
+<h2><u>Personal Information Section</u></h2>
+<a class="anchor" id="pi"></a> 
+    <fieldset>
+        <legend><b>Name:</b></legend>
+        <label class="name" for="afirst">First Name:*</label>
+        <input type="text" id="afirst" name="afirst" placeholder="First" maxlength="35" ><br><br>
 
-                <label class="address" for="astate">State:</label>
-                <select id="astate" name="astate" required>
-                    <option value="selectstate">Select a State</option>
-                    <option value="alabama">Alabama</option>
-                    <option value="alaska">Alaska</option>
-                    <option value="arizona">Arizona</option>
-                    <option value="arkansas">Arkansas</option>
-                    <option value="california">California</option>
-                    <option value="colorado">Colorado</option>
-                    <option value="connecticut">Connecticut</option>
-                    <option value="delaware">Delaware</option>
-                    <option value="florida">Florida</option>
-                    <option value="georgia">Georgia</option>
-                    <option value="hawaii">Hawaii</option>
-                    <option value="idaho">Idaho</option>
-                    <option value="illinois">IllinoisFlorida</option>
-                    <option value="indiana">Indiana</option>
-                    <option value="iowa">Iowa</option>
-                    <option value="kansas">Kansas</option>
-                    <option value="kentucky">Kentucky</option>
-                    <option value="louisiana">Louisiana</option>
-                    <option value="maine">Maine</option>
-                    <option value="maryland">Maryland</option>
-                    <option value="massachusetts">Massachusetts</option>
-                    <option value="michigan">Michigan</option>
-                    <option value="minnesota">Minnesota</option>
-                    <option value="mississippi">Mississippi</option>
-                    <option value="missouri">Missouri</option>
-                    <option value="montana">Montana</option>
-                    <option value="nebraska">Nebraska</option>
-                    <option value="nevada">Nevada</option>
-                    <option value="newhampshire">New Hampshire</option>
-                    <option value="newjersey">New Jersey</option>
-                    <option value="newmexico">New Mexico</option>
-                    <option value="newyork">New York</option>
-                    <option value="northcarolina">North Carolina</option>
-                    <option value="northdakota">North Dakota</option>
-                    <option value="ohio">Ohio</option>
-                    <option value="oklahoma">Oklahoma</option>
-                    <option value="oregon">Oregon</option>
-                    <option value="pennsylvania">Pennsylvania</option>
-                    <option value="rhodeisland">Rhodeisland</option>
-                    <option value="southcarolina">South Carolina</option>
-                    <option value="southdakota">South Dakota</option>
-                    <option value="tennessee">Tennessee</option>
-                    <option value="texas">Texas</option>
-                    <option value="utah">Utah</option>
-                    <option value="vermont">Vermont</option>
-                    <option value="virginia">Virginia</option>
-                    <option value="washington">Washington</option>
-                    <option value="westvirginia">West Virginia</option>
-                    <option value="wisconsin">Wisconsin</option>
-                    <option value="wyoming">Wyoming</option>
-                </select><br><br>
-            
-                <label class="address" for="azip">ZIP:</label>
-                <input type="text" id="azip" name="azip" placeholder="ZIP" maxlength="5" value="32246" required><br><br>
+        <label class="name" for="amiddle">Middle Name:</label>
+        <input type="text" id="amiddle" name="amiddle" placeholder="Middle" maxlength="35"><br><br>
+    
+        <label class="name" for="alast">Last Name:*</label>
+        <input type="text" id="alast" name="alast" placeholder="Last" maxlength="35" >
+    </fieldset> <br>          
+    
+    <!-- Applicant Address -->
+    <fieldset>
+        <legend><b>Current Home Address:*</b></legend>
+        <label class="address" for="astreet">Street Address:</label>
+        <input type="text" id="astreet" name="astreet" placeholder="Street" maxlength="50" ><br><br>
+    
+        <label class="address" for="acity">City:</label>
+        <input type="text" id="acity" name="acity" placeholder="City" maxlength="35" ><br><br>
 
-                <label class="">How long have you live at your current address:</label><br>
-                <label style="padding-left: 10px; padding-right: 10px" for="ayears">Years:</label>
-                <select id="ayears" name="ayears" required>
-                    <option value="-1">Years</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
-                    <option value="32">32</option>
-                    <option value="33">33</option>
-                    <option value="34">34</option>
-                    <option value="35">35</option>
-                    <option value="36">36</option>
-                    <option value="37">37</option>
-                    <option value="38">38</option>
-                    <option value="39">39</option>
-                    <option value="40">40</option>
-                    <option value="41">41</option>
-                    <option value="42">42</option>
-                    <option value="43">43</option>
-                    <option value="44">44</option>
-                    <option value="45">45</option>
-                    <option value="46">46</option>
-                    <option value="47">47</option>
-                    <option value="48">48</option>
-                    <option value="49">49</option>
-                    <option value="50">50</option>
-                    <option value="51">51</option>
-                    <option value="52">52</option>
-                    <option value="53">53</option>
-                    <option value="54">54</option>
-                    <option value="55">55</option>
-                    <option value="56">56</option>
-                    <option value="57">57</option>
-                    <option value="58">58</option>
-                    <option value="59">59</option>
-                    <option value="60">60</option>
-                    <option value="61">61</option>
-                    <option value="62">62</option>
-                    <option value="63">63</option>
-                    <option value="64">64</option>
-                    <option value="65">65</option>
-                    <option value="66">66</option>
-                    <option value="67">67</option>
-                    <option value="68">68</option>
-                    <option value="69">69</option>
-                    <option value="70">70</option>
-                    <option value="71">71</option>
-                    <option value="72">72</option>
-                    <option value="73">73</option>
-                    <option value="74">74</option>
-                    <option value="75">75</option>
-                    <option value="76">76</option>
-                    <option value="77">77</option>
-                    <option value="78">78</option>
-                    <option value="79">79</option>
-                    <option value="80">80</option>
-                    <option value="81">81</option>
-                    <option value="82">82</option>
-                    <option value="83">83</option>
-                    <option value="84">84</option>
-                    <option value="85">85</option>
-                    <option value="86">86</option>
-                    <option value="87">87</option>
-                    <option value="88">88</option>
-                    <option value="89">89</option>
-                    <option value="90">90</option>
-                    <option value="91">91</option>
-                    <option value="92">92</option>
-                    <option value="93">93</option>
-                    <option value="94">94</option>
-                    <option value="95">95</option>
-                    <option value="96">96</option>
-                    <option value="97">97</option>
-                    <option value="98">98</option>
-                    <option value="99">99</option>
+        <label class="address" for="astate">State:</label>
+        <select id="astate" name="astate" >
+            <option value="selectstate">Select a State</option>
+            <option value="alabama">Alabama</option>
+            <option value="alaska">Alaska</option>
+            <option value="arizona">Arizona</option>
+            <option value="arkansas">Arkansas</option>
+            <option value="california">California</option>
+            <option value="colorado">Colorado</option>
+            <option value="connecticut">Connecticut</option>
+            <option value="delaware">Delaware</option>
+            <option value="florida">Florida</option>
+            <option value="georgia">Georgia</option>
+            <option value="hawaii">Hawaii</option>
+            <option value="idaho">Idaho</option>
+            <option value="illinois">Illinois</option>
+            <option value="indiana">Indiana</option>
+            <option value="iowa">Iowa</option>
+            <option value="kansas">Kansas</option>
+            <option value="kentucky">Kentucky</option>
+            <option value="louisiana">Louisiana</option>
+            <option value="maine">Maine</option>
+            <option value="maryland">Maryland</option>
+            <option value="massachusetts">Massachusetts</option>
+            <option value="michigan">Michigan</option>
+            <option value="minnesota">Minnesota</option>
+            <option value="mississippi">Mississippi</option>
+            <option value="missouri">Missouri</option>
+            <option value="montana">Montana</option>
+            <option value="nebraska">Nebraska</option>
+            <option value="nevada">Nevada</option>
+            <option value="newhampshire">New Hampshire</option>
+            <option value="newjersey">New Jersey</option>
+            <option value="newmexico">New Mexico</option>
+            <option value="newyork">New York</option>
+            <option value="northcarolina">North Carolina</option>
+            <option value="northdakota">North Dakota</option>
+            <option value="ohio">Ohio</option>
+            <option value="oklahoma">Oklahoma</option>
+            <option value="oregon">Oregon</option>
+            <option value="pennsylvania">Pennsylvania</option>
+            <option value="rhodeisland">Rhodeisland</option>
+            <option value="southcarolina">South Carolina</option>
+            <option value="southdakota">South Dakota</option>
+            <option value="tennessee">Tennessee</option>
+            <option value="texas">Texas</option>
+            <option value="utah">Utah</option>
+            <option value="vermont">Vermont</option>
+            <option value="virginia">Virginia</option>
+            <option value="washington">Washington</option>
+            <option value="westvirginia">West Virginia</option>
+            <option value="wisconsin">Wisconsin</option>
+            <option value="wyoming">Wyoming</option>
+        </select><br><br>
+    
+        <label class="address" for="azip">ZIP:</label>
+        <input type="text" id="azip" name="azip" placeholder="ZIP" maxlength="5" ><br><br>
 
-                </select>
+        <label class="">How long have you live at your current address:</label><br>
+        <label style="padding-left: 10px; padding-right: 10px" for="ayears">Years:</label>
+        <select id="ayears" name="ayears" >
+            <option value="selectyears">Years</option>
+            <option value="1">0</option>
+            <option value="2">1</option>
+            <option value="3">2</option>
+            <option value="4">3</option>
+            <option value="5">4</option>
+            <option value="6">5</option>
+            <option value="7">6</option>
+            <option value="8">7</option>
+            <option value="9">8</option>
+            <option value="10">9</option>
+            <option value="11">10</option>
+            <option value="12">11</option>
+            <option value="13">12</option>
+            <option value="14">13</option>
+            <option value="15">14</option>
+            <option value="16">15</option>
+            <option value="17">16</option>
+            <option value="18">17</option>
+            <option value="19">18</option>
+            <option value="20">19</option>
+            <option value="21">20</option>
+            <option value="22">21</option>
+            <option value="23">22</option>
+            <option value="24">23</option>
+            <option value="25">24</option>
+            <option value="26">25</option>
+            <option value="27">26</option>
+            <option value="28">27</option>
+            <option value="29">28</option>
+            <option value="30">29</option>
+            <option value="31">30</option>
+            <option value="32">31</option>
+            <option value="33">32</option>
+            <option value="34">33</option>
+            <option value="35">34</option>
+            <option value="36">35</option>
+            <option value="37">36</option>
+            <option value="38">37</option>
+            <option value="39">38</option>
+            <option value="40">39</option>
+            <option value="41">40</option>
+            <option value="42">41</option>
+            <option value="43">42</option>
+            <option value="44">43</option>
+            <option value="45">44</option>
+            <option value="46">45</option>
+            <option value="47">46</option>
+            <option value="48">47</option>
+            <option value="49">48</option>
+            <option value="50">49</option>
+            <option value="51">50</option>
+            <option value="52">51</option>
+            <option value="53">52</option>
+            <option value="54">53</option>
+            <option value="55">54</option>
+            <option value="56">55</option>
+            <option value="57">56</option>
+            <option value="58">57</option>
+            <option value="59">58</option>
+            <option value="60">59</option>
+            <option value="61">60</option>
+            <option value="62">61</option>
+            <option value="63">62</option>
+            <option value="64">63</option>
+            <option value="65">64</option>
+            <option value="66">65</option>
+            <option value="67">66</option>
+            <option value="68">67</option>
+            <option value="69">68</option>
+            <option value="70">69</option>
+            <option value="71">70</option>
+            <option value="72">71</option>
+            <option value="73">72</option>
+            <option value="74">73</option>
+            <option value="75">74</option>
+            <option value="76">75</option>
+            <option value="77">76</option>
+            <option value="78">77</option>
+            <option value="79">78</option>
+            <option value="80">79</option>
+            <option value="81">80</option>
+            <option value="82">81</option>
+            <option value="83">82</option>
+            <option value="84">83</option>
+            <option value="85">84</option>
+            <option value="86">85</option>
+            <option value="87">86</option>
+            <option value="88">87</option>
+            <option value="89">88</option>
+            <option value="90">89</option>
+            <option value="91">90</option>
+            <option value="92">91</option>
+            <option value="93">92</option>
+            <option value="94">93</option>
+            <option value="95">94</option>
+            <option value="96">95</option>
+            <option value="97">96</option>
+            <option value="98">97</option>
+            <option value="99">98</option>
+            <option value="100">99</option>
 
-                <label style="padding-left: 10px; padding-right: 10px" for="amonths">Months:</label>
-                <select id="amonths" name="amonths" required>
-                    <option value="-1">Months</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                </select>
-            </fieldset> <br>
+        </select>
 
-            <!-- Minimum Age Requirement -->
-            <fieldset>
-                <legend for="18"><b>Are you at least 18 years of age:</b></legend>
-                <label class="rb">Yes</label>           
-                <input type="radio" id="aage1" name="aage1" value="Yes">
-                <span class="rbcheck"></span>
-                <label class="rb">No</label>
-                <input type="radio" id="aage2" name="aage2" value="No">
-                <span class="rbcheck"></span>
-            </fieldset><br>
+        <label style="padding-left: 10px; padding-right: 10px" for="amonths">Months:</label>
+        <select id="amonths" name="amonths" required>
+            <option value="selectmonths">Months</option>
+            <option value="1">0</option>
+            <option value="2">1</option>
+            <option value="3">2</option>
+            <option value="4">3</option>
+            <option value="5">4</option>
+            <option value="6">5</option>
+            <option value="7">6</option>
+            <option value="8">7</option>
+            <option value="9">8</option>
+            <option value="10">9</option>
+            <option value="11">10</option>
+            <option value="12">11</option>
+        </select>
+    </fieldset> <br>
 
-            <!-- Contact Information -->
-            <fieldset>
-                <legend><b>Contact Information</b></legend>
+    <!-- Minimum Age Requirement -->
+    <fieldset>
+        <legend><b>Are you at least 18 years of age:*</b></legend>
+        <label class="rb">Yes</label>           
+        <input type="radio" id="aage" name="aage" value="Yes">
+        <span class="rbcheck"></span>
+        <label class="rb">No</label>
+        <input type="radio" id="aage" name="aage" value="No">
+        <span class="rbcheck"></span>
+    </fieldset><br>
 
-                <!-- Applicant Phone Numbers -->
-                <label class="contact" for="primary">Primary Phone Number:</label>
-                <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" maxlength="14" value="999-999-9999"required>
-                <br><br>
-                <label class="" for="primarymobile">Check if this is a mobile number:</label>
-                <input type="checkbox" id="primarymobile" name="primarymobile">
-                <br><br>
+    <!-- Contact Information -->
+    <fieldset>
+        <legend><b>Contact Information</b></legend>
 
-                <label class="contact" for="secondary">Secondary Phone Number:</label>
-                <input type="text" id="secondary" name="secondary" placeholder="Secondary [XXX-XXX-XXXX]" maxlength="14"><br><br>
-                <label class="" for="secondarymobile">Check if this is a mobile number:</label>
-                <input type="checkbox" id="secondarymobile" name="secondarymobile"><br><br>
+        <!-- Applicant Phone Numbers -->
+        <label class="contact" for="primary">Primary Phone Number:*</label>
+        <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" maxlength="14"  >
+        <br><br>
+        <label class="" for="primarymobile">Check if this is a mobile number:</label>
+        <input type="checkbox" id="primarymobile" name="primarymobile">
+        <br><br>
 
-                <!-- Applicant Email -->
-                <label class="contact" for="aemail">Email Address:</label>
-                <input type="text" id="aemail" name="aemail" placeholder="username@mail.com" maxlength="50" value="John@gmail.com" required>
-            </fieldset> <br>
+        <label class="contact" for="secondary">Secondary Phone Number:</label>
+        <input type="text" id="secondary" name="secondary" placeholder="Secondary [XXX-XXX-XXXX]" maxlength="14"><br><br>
+        <label class="" for="secondarymobile">Check if this is a mobile number:</label>
+        <input type="checkbox" id="secondarymobile" name="secondarymobile"><br><br>
 
-            
-            <!-- Position Information-->
-            <fieldset>
-                <legend for="position"><b>Position Applying For:</b></legend>
+        <!-- Applicant Email -->
+        <label class="contact" for="aemail">Email Address:*</label>
+        <input type="text" id="aemail" name="aemail" placeholder="username@mail.com" maxlength="50"  >
+    </fieldset> <br>
 
-                <!-- Position -->
-                <label class="misc" for="position">Position:</label>
-                <select id="position" name="position" required>
-                    <option value="selectposition">Select a Position</option>
-                    <option value="it">IT Specialist</option>
-                    <option value="network">Network Administrator</option>
-                    <option value="software">Software Developer</option>
-                    <option value="analyst">Systems Analyst</option>
-                </select><br><br>
+    
+    <!-- Position Information-->
+    <fieldset>
+        <legend><b>Position Applying For:*</b></legend>
 
-                <!-- Desired Salary -->
-                <label class="misc" for="salary">Desired Salary: $</label>
-                <input type="text" id="salary" name="salary" placeholder="Desired Salary" maxlength="7" value="1000000"required>
-                <p class="position">Whole number only, no spaces or commas</p>
-            </fieldset> <br>
+        <!-- Position -->
+        <label class="misc" for="position">Position:</label>
+        <select id="position" name="position"  >
+            < <option value="selectposition">Select a Position</option>
+            <option value="it">IT Specialist</option>
+            <option value="network">Network Administrator</option>
+            <option value="software">Software Developer</option>
+            <option value="analyst">Systems Analyst</option>
+        </select><br><br>
+
+        <!-- Desired Salary -->
+        <label class="misc" for="salary">Desired Salary: $</label>
+        <input type="text" id="salary" name="salary" placeholder="Desired Salary" maxlength="7"  >
+        <p class="position">Whole number only, no spaces or commas</p>
+    </fieldset> <br>
 
 
 <!-- ****************************  Work Experience Section  ********************************************************************************** -->   
         
-        <h2><u>Work Experience Section</u></h2>
-        <a class="anchor" id="we"></a>
+<h2><u>Work Experience Section</u></h2>
+<a class="anchor" id="we"></a>
 
-            <!-- Employer's Information -->
-            <fieldset>
-                <legend for="employer"><b>Employer Information:</b></legend>
+    <!-- Employer's Information -->
+    <fieldset>
+        <legend><b>Employer Information:*</b></legend>
 
-                <!-- Employer Name -->
-                <label class="eaddress" for="employer">Employer's Name:</label>
-                <input type="text" id="employer" name="employer" placeholder="Employer Name" maxlength="50"><br><br>
+        <!-- Employer Name -->
+        <label class="eaddress" for="employer">Employer's Name:</label>
+        <input type="text" id="employer" name="employer" placeholder="Employer Name" maxlength="50"  ><br><br>
 
-                <!-- Employer Address -->
-                <label class="eaddress" for="estreet">Employer's Address:</label>
-                <input type="text" id="estreet" name="estreet" placeholder="Employer's Street Address"><br><br>
-            
-                <label class="eaddress" for="ecity">City:</label>
-                <input type="text" id="ecity" name="ecity" placeholder="Employer's City"><br><br>
+        <!-- Employer Address -->
+        <label class="eaddress" for="estreet">Employer's Address:</label>
+        <input type="text" id="estreet" name="estreet" placeholder="Employer's Street Address"  ><br><br>
+    
+        <label class="eaddress" for="ecity">City:</label>
+        <input type="text" id="ecity" name="ecity" placeholder="Employer's City"  ><br><br>
 
-                <label class="eaddress" for="estate">State:</label>
-                <select id="estate" name="estate">
-                    <option value="selectstate">Select a State</option>
-                    <option value="alabama">Alabama</option>
-                    <option value="alaska">Alaska</option>
-                    <option value="arizona">Arizona</option>
-                    <option value="arkansas">Arkansas</option>
-                    <option value="california">California</option>
-                    <option value="colorado">Colorado</option>
-                    <option value="connecticut">Connecticut</option>
-                    <option value="delaware">Delaware</option>
-                    <option value="florida">Florida</option>
-                    <option value="georgia">Georgia</option>
-                    <option value="hawaii">Hawaii</option>
-                    <option value="idaho">Idaho</option>
-                    <option value="illinois">IllinoisFlorida</option>
-                    <option value="indiana">Indiana</option>
-                    <option value="iowa">Iowa</option>
-                    <option value="kansas">Kansas</option>
-                    <option value="kentucky">Kentucky</option>
-                    <option value="louisiana">Louisiana</option>
-                    <option value="maine">Maine</option>
-                    <option value="maryland">Maryland</option>
-                    <option value="massachusetts">Massachusetts</option>
-                    <option value="michigan">Michigan</option>
-                    <option value="minnesota">Minnesota</option>
-                    <option value="mississippi">Mississippi</option>
-                    <option value="missouri">Missouri</option>
-                    <option value="montana">Montana</option>
-                    <option value="nebraska">Nebraska</option>
-                    <option value="nevada">Nevada</option>
-                    <option value="newhampshire">New Hampshire</option>
-                    <option value="newjersey">New Jersey</option>
-                    <option value="newmexico">New Mexico</option>
-                    <option value="newyork">New York</option>
-                    <option value="northcarolina">North Carolina</option>
-                    <option value="northdakota">North Dakota</option>
-                    <option value="ohio">Ohio</option>
-                    <option value="oklahoma">Oklahoma</option>
-                    <option value="oregon">Oregon</option>
-                    <option value="pennsylvania">Pennsylvania</option>
-                    <option value="rhodeisland">Rhodeisland</option>
-                    <option value="southcarolina">South Carolina</option>
-                    <option value="southdakota">South Dakota</option>
-                    <option value="tennessee">Tennessee</option>
-                    <option value="texas">Texas</option>
-                    <option value="utah">Utah</option>
-                    <option value="vermont">Vermont</option>
-                    <option value="virginia">Virginia</option>
-                    <option value="washington">Washington</option>
-                    <option value="westvirginia">West Virginia</option>
-                    <option value="wisconsin">Wisconsin</option>
-                    <option value="wyoming">Wyoming</option>
-                </select><br><br>
-            
-                <label class="eaddress" for="employerzip">ZIP:</label>
-                <input type="text" id="employerzip" name="employerzip" placeholder="ZIP">              
-            </fieldset> <br>
+        <label class="eaddress" for="estate">State:</label>
+        <select id="estate" name="estate"  >
+            <option value="selectstate">Select a State</option>
+            <option value="alabama">Alabama</option>
+            <option value="alaska">Alaska</option>
+            <option value="arizona">Arizona</option>
+            <option value="arkansas">Arkansas</option>
+            <option value="california">California</option>
+            <option value="colorado">Colorado</option>
+            <option value="connecticut">Connecticut</option>
+            <option value="delaware">Delaware</option>
+            <option value="florida">Florida</option>
+            <option value="georgia">Georgia</option>
+            <option value="hawaii">Hawaii</option>
+            <option value="idaho">Idaho</option>
+            <option value="illinois">IllinoisFlorida</option>
+            <option value="indiana">Indiana</option>
+            <option value="iowa">Iowa</option>
+            <option value="kansas">Kansas</option>
+            <option value="kentucky">Kentucky</option>
+            <option value="louisiana">Louisiana</option>
+            <option value="maine">Maine</option>
+            <option value="maryland">Maryland</option>
+            <option value="massachusetts">Massachusetts</option>
+            <option value="michigan">Michigan</option>
+            <option value="minnesota">Minnesota</option>
+            <option value="mississippi">Mississippi</option>
+            <option value="missouri">Missouri</option>
+            <option value="montana">Montana</option>
+            <option value="nebraska">Nebraska</option>
+            <option value="nevada">Nevada</option>
+            <option value="newhampshire">New Hampshire</option>
+            <option value="newjersey">New Jersey</option>
+            <option value="newmexico">New Mexico</option>
+            <option value="newyork">New York</option>
+            <option value="northcarolina">North Carolina</option>
+            <option value="northdakota">North Dakota</option>
+            <option value="ohio">Ohio</option>
+            <option value="oklahoma">Oklahoma</option>
+            <option value="oregon">Oregon</option>
+            <option value="pennsylvania">Pennsylvania</option>
+            <option value="rhodeisland">Rhodeisland</option>
+            <option value="southcarolina">South Carolina</option>
+            <option value="southdakota">South Dakota</option>
+            <option value="tennessee">Tennessee</option>
+            <option value="texas">Texas</option>
+            <option value="utah">Utah</option>
+            <option value="vermont">Vermont</option>
+            <option value="virginia">Virginia</option>
+            <option value="washington">Washington</option>
+            <option value="westvirginia">West Virginia</option>
+            <option value="wisconsin">Wisconsin</option>
+            <option value="wyoming">Wyoming</option>
+        </select><br><br>
+    
+        <label class="eaddress" for="employerzip">ZIP:</label>
+        <input type="text" id="employerzip" name="employerzip" placeholder="ZIP"  >              
+    </fieldset> <br>
 
-            <!-- Supervisor Information -->
-            <fieldset>
-                <legend for="supervisor"><b>Supervior's Infromation</b></legend>
-                <!-- Supervisor's Name -->
-                <label class="sname" for="supervisor">Supervisor's Name:</label>
-                <input type="text" id="supervisor" name="supervisor" placeholder="Supervisor Name"><br><br>
- 
-                <!-- Supervisor's Phone Numbers -->
-                <label class="sname" for="supervisornumber">Supervisor's Phone Number:</label>
-                <input type="text" id="supervisornumber" name="supervisornumber" placeholder="XXX-XXX-XXXX"><br><br>
+    <!-- Supervisor Information -->
+    <fieldset>
+        <legend><b>Supervior's Infromation*</b></legend>
+        <!-- Supervisor's Name -->
+            <label class="sname" for="supervisor">Supervisor's Name:</label>
+            <input type="text" id="supervisor" name="supervisor" placeholder="Supervisor Name"  ><br><br>
 
-                <!-- Supervisor's Email -->
-                <label class="sname" for="supervisoremail">Supervisor's Email Address:</label>
-                <input type="text" id="supervisoremail" name="supervisoremail" placeholder="username@mail.com"><br><br>
+        <!-- Supervisor's Phone Numbers -->
+            <label class="sname" for="supervisorphone">Supervisor's Phone Number:</label>
+            <input type="text" id="supervisorphone" name="supervisorphone" placeholder="XXX-XXX-XXXX"  ><br><br>
 
-                <label>May we contact this supervisor:</label><br>
-                <label style="padding-left: 10px">Yes</label>           
-                <input type="radio" id="yes" name="contact" value="Yes">
-                <span class="rbcheck"></span>
-                <label style="padding-left: 10px">No</label>
-                <input type="radio" id="no" name="contact" value="No">
-                <span class="rbcheck"></span>
+        <!-- Supervisor's Email -->
+            <label class="sname" for="supervisoremail">Supervisor's Email Address:</label>
+            <input type="text" id="supervisoremail" name="supervisoremail" placeholder="username@mail.com"  ><br><br>
 
-            </fieldset> <br>
+            <label>May we contact this supervisor:</label><br>
+            <label style="padding-left: 10px">Yes</label>           
+            <input type="radio" id="yes" name="contact" value="Yes">
+            <span class="rbcheck"></span>
+            <label style="padding-left: 10px">No</label>
+            <input type="radio" id="no" name="contact" value="No">
+            <span class="rbcheck"></span>
 
-            <fieldset>
-                 <!-- Dates of Employment -->
-                 <legend for="employment"><b>Employment Information:</b></legend>
-                    <label>Dates of Employment:</label><br>
-                    <label style="padding-left: 15px; padding-right: 15px" for="startdate">Start Date:</label>
-			        <input type="date" id="startdate" name="startdate" min="1955-01-01" max="2022-01-01"><br><br>
+    </fieldset> <br>
 
-                    <label style="padding-left: 15px; padding-right: 20px" for="enddate">End Date:</label>
-			        <input type="date" id="enddate" name="enddate" min="1955-01-01" max="2022-01-01"> <br><br>
-            
-            <!-- Position -->
+    <fieldset>
+         <!-- Dates of Employment -->
+         <legend><b>Employment Information:*</b></legend>
+            <label>Dates of Employment:</label><br>
+            <label style="padding-left: 15px; padding-right: 15px" for="sdate">Start Date:</label>
+            <input type="date" id="sdate" name="sdate" min="1955-01-01" max="2021-12-31"><br><br>
+
+            <label style="padding-left: 15px; padding-right: 20px" for="edate">End Date:</label>
+            <input type="date" id="edate" name="edate" min="1955-01-02" max="2022-01-01"> <br><br>
 
 
-            <!-- Job Title -->
+        <!-- Job Title -->
             <label class="employ" for="job">Job Title:</label>
-            <input type="text" id="job" name="job" placeholder="Job Title"><br><br>
+            <input type="text" id="job" name="job" placeholder="Job Title" maxlength="100" ><br><br>
 
-            <!-- Description of Duties and Responsibilities -->
+        <!-- Description of Duties and Responsibilities -->
             <label class="" for="duties">List Duties Performed, Skills Used, and Adancements and Promotions Earned:</label><br>
-            <textarea id="duties" name="duties" placeholder="Details of your skills and experience" rows="4" cols="75"></textarea><br><br>
-            
-            <!-- Reason For Leaving  -->
+            <textarea id="duties" name="duties" placeholder="Details of your skills and experience" rows="4" cols="75"
+            maxlength="255"></textarea><br><br>
+    
+        <!-- Reason For Leaving  -->
             <label class="" for="leaving">Reason For Leaving:</label><br>
-            <textarea id="leaving" name="leaving" placeholder="Explain Your Reason For Leaving" rows="4" cols="75"></textarea><br><br>
-                
-            </fieldset> <br>
+            <textarea id="leaving" name="leaving" placeholder="Explain Your Reason For Leaving" rows="4" cols="75"
+            maxlength="255"></textarea><br>
+        
+    </fieldset> <br>
 
 
 <!-- ****************************  Education Experience Section  ********************************************************************************** -->      
-        <h2><u>Education Experience Section</u></h2>
-        <a class="anchor" id="ee"></a>
+<h2><u>Education Experience Section</u></h2>
+<a class="anchor" id="ee"></a>
 
-            <!-- Highest Education Achieved -->
-            <label style="padding-right: 10px" for="higered">Highest education you have achieved:</label>
-            <select id="higered" name="higered" required>
-                <option value="-1">Highest Education Achieved</option>
-                <option value="0">GED</option>
-                <option value="1">High School Diploma</option>
-                <option value="2">Some College</option>
-                <option value="3">Associates</option>
-                <option value="4">Bachelors</option>
-                <option value="5">Masters</option>
-                <option value="6">Ph.D</option>
-            </select><br><br>
+    <!-- Highest Education Achieved -->
+    <label style="padding-right: 10px" for="highest">Highest education you have achieved:*</label>
+    <select id="highest" name="highest"  >
+        <option value="selecthighest">Highest Education Achieved</option>
+        <option value="1">GED</option>
+        <option value="2">High School Diploma</option>
+        <option value="3">Some College</option>
+        <option value="4">Associates</option>
+        <option value="5">Bachelors</option>
+        <option value="6">Masters</option>
+        <option value="7">Ph.D</option>
+    </select><br><br>
 
-            <!-- Education Career Field -->
-            <fieldset>
-                <legend for="ed"><b>Education Career Field:</b></legend>
-                <label class="emisc" for="highered">School Type:</label>
-			    <select id="higered" name="higered" required>
-                    <option value="-1">School Type</option>
-                    <option value="0">High School</option>
-                    <option value="1">Undergraduate</option>
-                    <option value="2">Graduate</option>
-                    <option value="3">Post-Graduate</option>
-                    <option value="4">Professional</option>
-                </select><br><br>
+    <!-- Education Career Field -->
+    <fieldset>
+        <legend><b>Education Career Field:*</b></legend>
+        <label class="emisc" for="highered">School Type:</label>
+        <select id="highered" name="higered"  >
+            <option value="selectschool">School Type</option>
+            <option value="1">High School</option>
+            <option value="2">Undergraduate</option>
+            <option value="3">Graduate</option>
+            <option value="4">Post-Graduate</option>
+            <option value="5">Professional</option>
+        </select><br><br>
 
-                <label class="emisc" for="schoolname">School Name:</label>
-                <input type="text" id="schoolname" name="schoolname" placeholder="School Name" value="Local High School"required><br><br>
+        <label class="emisc" for="schoolname">School Name:</label>
+        <input type="text" id="schoolname" name="schoolname" placeholder="School Name"  ><br><br>
 
-                <label class="emisc" for="schoolcity">City:</label>
-                <input type="text" id="schoocity" name="schoolcity" placeholder="City" value="Jacksonville" required><br><br>
+        <label class="emisc" for="schoolcity">City:</label>
+        <input type="text" id="schoolcity" name="schoolcity" placeholder="City"  ><br><br>
 
-                <label class="emisc" for="schoolstate">State:</label>
-                <select id="schoolstate" name="schoolstate" required>
-                    <option value="selectstate">Select a State</option>
-                    <option value="alabama">Alabama</option>
-                    <option value="alaska">Alaska</option>
-                    <option value="arizona">Arizona</option>
-                    <option value="arkansas">Arkansas</option>
-                    <option value="california">California</option>
-                    <option value="colorado">Colorado</option>
-                    <option value="connecticut">Connecticut</option>
-                    <option value="delaware">Delaware</option>
-                    <option value="florida">Florida</option>
-                    <option value="georgia">Georgia</option>
-                    <option value="hawaii">Hawaii</option>
-                    <option value="idaho">Idaho</option>
-                    <option value="illinois">IllinoisFlorida</option>
-                    <option value="indiana">Indiana</option>
-                    <option value="iowa">Iowa</option>
-                    <option value="kansas">Kansas</option>
-                    <option value="kentucky">Kentucky</option>
-                    <option value="louisiana">Louisiana</option>
-                    <option value="maine">Maine</option>
-                    <option value="maryland">Maryland</option>
-                    <option value="massachusetts">Massachusetts</option>
-                    <option value="michigan">Michigan</option>
-                    <option value="minnesota">Minnesota</option>
-                    <option value="mississippi">Mississippi</option>
-                    <option value="missouri">Missouri</option>
-                    <option value="montana">Montana</option>
-                    <option value="nebraska">Nebraska</option>
-                    <option value="nevada">Nevada</option>
-                    <option value="newhampshire">New Hampshire</option>
-                    <option value="newjersey">New Jersey</option>
-                    <option value="newmexico">New Mexico</option>
-                    <option value="newyork">New York</option>
-                    <option value="northcarolina">North Carolina</option>
-                    <option value="northdakota">North Dakota</option>
-                    <option value="ohio">Ohio</option>
-                    <option value="oklahoma">Oklahoma</option>
-                    <option value="oregon">Oregon</option>
-                    <option value="pennsylvania">Pennsylvania</option>
-                    <option value="rhodeisland">Rhodeisland</option>
-                    <option value="southcarolina">South Carolina</option>
-                    <option value="southdakota">South Dakota</option>
-                    <option value="tennessee">Tennessee</option>
-                    <option value="texas">Texas</option>
-                    <option value="utah">Utah</option>
-                    <option value="vermont">Vermont</option>
-                    <option value="virginia">Virginia</option>
-                    <option value="washington">Washington</option>
-                    <option value="westvirginia">West Virginia</option>
-                    <option value="wisconsin">Wisconsin</option>
-                    <option value="wyoming">Wyoming</option>
-                </select><br><br>
+        <label class="emisc" for="schoolstate">State:</label>
+        <select id="schoolstate" name="schoolstate"  >
+            <option value="selectstate">Select a State</option>
+            <option value="alabama">Alabama</option>
+            <option value="alaska">Alaska</option>
+            <option value="arizona">Arizona</option>
+            <option value="arkansas">Arkansas</option>
+            <option value="california">California</option>
+            <option value="colorado">Colorado</option>
+            <option value="connecticut">Connecticut</option>
+            <option value="delaware">Delaware</option>
+            <option value="florida">Florida</option>
+            <option value="georgia">Georgia</option>
+            <option value="hawaii">Hawaii</option>
+            <option value="idaho">Idaho</option>
+            <option value="illinois">IllinoisFlorida</option>
+            <option value="indiana">Indiana</option>
+            <option value="iowa">Iowa</option>
+            <option value="kansas">Kansas</option>
+            <option value="kentucky">Kentucky</option>
+            <option value="louisiana">Louisiana</option>
+            <option value="maine">Maine</option>
+            <option value="maryland">Maryland</option>
+            <option value="massachusetts">Massachusetts</option>
+            <option value="michigan">Michigan</option>
+            <option value="minnesota">Minnesota</option>
+            <option value="mississippi">Mississippi</option>
+            <option value="missouri">Missouri</option>
+            <option value="montana">Montana</option>
+            <option value="nebraska">Nebraska</option>
+            <option value="nevada">Nevada</option>
+            <option value="newhampshire">New Hampshire</option>
+            <option value="newjersey">New Jersey</option>
+            <option value="newmexico">New Mexico</option>
+            <option value="newyork">New York</option>
+            <option value="northcarolina">North Carolina</option>
+            <option value="northdakota">North Dakota</option>
+            <option value="ohio">Ohio</option>
+            <option value="oklahoma">Oklahoma</option>
+            <option value="oregon">Oregon</option>
+            <option value="pennsylvania">Pennsylvania</option>
+            <option value="rhodeisland">Rhodeisland</option>
+            <option value="southcarolina">South Carolina</option>
+            <option value="southdakota">South Dakota</option>
+            <option value="tennessee">Tennessee</option>
+            <option value="texas">Texas</option>
+            <option value="utah">Utah</option>
+            <option value="vermont">Vermont</option>
+            <option value="virginia">Virginia</option>
+            <option value="washington">Washington</option>
+            <option value="westvirginia">West Virginia</option>
+            <option value="wisconsin">Wisconsin</option>
+            <option value="wyoming">Wyoming</option>
+        </select><br><br>
 
-                <label class="emisc" for="major">Major or Degree:</label>
-                <input type="text" id="major" name="major" placeholder="Major or Degree">
-            </fieldset><br>
+        <label class="emisc" for="major">Major or Degree:</label>
+        <input type="text" id="major" name="major" placeholder="Major or Degree"  >
+    </fieldset><br>
 
-            <!-- Degrees and Certifications Earned  -->
-            <label class="" for="degrees">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:</label><br>
-            <textarea id="degrees" name="degrees" placeholder="Details of your educational achievements" rows="4" cols="75"></textarea><br><br>
+    <!-- Degrees and Certifications Earned  -->
+    <label class="" for="degrees">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:*</label><br>
+    <textarea id="degrees" name="degrees" placeholder="Details of your educational achievements" rows="4" cols="75"
+    maxlength="255"></textarea><br><br>
             
 
 <!-- ****************************  Miscellaneous Section  ********************************************************************************** -->   
            
-        <h2><u>Miscellaneous Section</u></h2>
-        <a class="anchor" id="misc"></a>
+<h2><u>Miscellaneous Section</u></h2>
+<a class="anchor" id="misc"></a>
 
-            <!-- Workday Availability Field -->
-            <fieldset>
-                <legend for="work"><b>Work Availability Field:</b></legend>
+    <!-- Workday Availability Field -->
+    <fieldset>
+        <legend><b>Work Availability Field:*</b></legend>
 
-                <!-- Available Start Date -->
-                <label class="" for="availabledate">Date available to start:</label>
-                <input type="date" id="availabledate" name="availabledate" min="2021-01-01" max="2025-01-01"><br><br>
-                
-                <label class="">Days available to work:</label>
-                    <table class="table1">
-                        <tr>
-                            <td class="td1">
-                                <label class="table1">Mon</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
+        <!-- Available Start Date -->
+        <label class="" for="availdate">Date available to start:</label>
+        <input type="date" id="availdate" name="availdate" min="2021-01-01" max="2025-01-01"><br><br>
+        
+        <label class="">Days available to work:</label>
+            <table class="table1">
+                <tr>
+                    <td class="td1">
+                        <label class="table1">Mon</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
 
-                            <td class="td1">
-                                <label class="table1">Tue</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
+                    <td class="td1">
+                        <label class="table1">Tue</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
 
-                            <td class="td1">
-                                <label class="table1">Wed</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
+                    <td class="td1">
+                        <label class="table1">Wed</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
 
-                            <td class="td1">
-                                 <label class="table1">Thu</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>                            
-                        </tr>
+                    <td class="td1">
+                         <label class="table1">Thu</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>                            
+                </tr>
 
-                        <tr>
-                            <td class="td1">
-                                <label class="table1">Fri</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
+                <tr>
+                    <td class="td1">
+                        <label class="table1">Fri</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
 
-                            <td class="td1">
-                                <label class="table1">Sat</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
+                    <td class="td1">
+                        <label class="table1">Sat</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
 
-                            <td class="td1">
-                                <label class="table1">Sun</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
+                    <td class="td1">
+                        <label class="table1">Sun</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
 
-                            <td class="td1">
-                                 <label class="table1">All</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>                            
-                        </tr>
-                    </table>
+                    <td class="td1">
+                         <label class="table1">All</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>                            
+                </tr>
+            </table>
 
-                <label class="">Employment Desired:</label><br>
-                <label style="padding-left: 10px">Full Time</label>           
-                    <input type="radio" id="fulltime" name="employment" value="Full Time">
-                    <span class="rbcheck"></span>
-                    <label style="padding-left: 10px">Part Time</label>
-                    <input type="radio" id="parttime" name="employment" value="Part Time">
-                    <span class="rbcheck"></span><br><br>
+        <label class="">Employment Desired:</label><br>
+        <label style="padding-left: 10px">Full Time</label>           
+            <input type="radio" id="fulltime" name="employment" value="Full Time">
+            <span class="rbcheck"></span>
+            <label style="padding-left: 10px">Part Time</label>
+            <input type="radio" id="parttime" name="employment" value="Part Time">
+            <span class="rbcheck"></span><br><br>
 
-                <label class="" for="hours">How many hours weekly can you work:</label>
-                    <input type="text" id="hours" name="hours" placeholder="Weekly Hours" value="40" required>
+        <label class="" for="hours">How many hours weekly can you work:</label>
+            <input type="text" id="hours" name="hours" placeholder="Weekly Hours" maxlength="3" >
 
-            </fieldset><br>
+    </fieldset><br>
 
-            <!-- Tranportation Field -->
-            <fieldset>
-                <legend for="transport"><b>Transportation Field:</b></legend>
+    <!-- Tranportation Field -->
+    <fieldset>
+        <legend><b>Transportation Field:*</b></legend>
 
-                <label class="">Do you have reliable transportation to work:</label><br>
-                    <label style="padding-left: 10px">Yes</label>           
-                    <input type="radio" id="transyes" name="trans" value="Yes">
-                    <span class="rbcheck"></span>
-                    <label style="padding-left: 10px">No</label>
-                    <input type="radio" id="transno" name="trans" value="No">
-                    <span class="rbcheck"></span><br><br>
+        <label class="">Do you have reliable transportation to work:</label><br>
+            <label style="padding-left: 10px">Yes</label>           
+            <input type="radio" id="transyes" name="trans" value="Yes">
+            <span class="rbcheck"></span>
+            <label style="padding-left: 10px">No</label>
+            <input type="radio" id="transno" name="trans" value="No">
+            <span class="rbcheck"></span><br><br>
 
-                <label class="">Are you willing to drive your personal vehicle as part of your duties:</label><br>
-                    <label style="padding-left: 10px">Yes</label>           
-                    <input type="radio" id="vehicleyes" name="vehicle" value="Yes">
-                    <span class="rbcheck"></span>
-                    <label style="padding-left: 10px">No</label>
-                    <input type="radio" id="vehicleno" name="vehicle" value="No">
-                    <span class="rbcheck"></span><br><br>
+        <label class="">Are you willing to drive your personal vehicle as part of your duties:</label><br>
+            <label style="padding-left: 10px">Yes</label>           
+            <input type="radio" id="vehicleyes" name="vehicle" value="Yes">
+            <span class="rbcheck"></span>
+            <label style="padding-left: 10px">No</label>
+            <input type="radio" id="vehicleno" name="vehicle" value="No">
+            <span class="rbcheck"></span><br><br>
 
-                <label class="">Do you have a valid driver's license:</label><br>
-                    <label style="padding-left: 10px">Yes</label>           
-                    <input type="radio" id="dlyes" name="dl" value="Yes">
-                    <span class="rbcheck"></span>
-                    <label style="padding-left: 10px">No</label>
-                    <input type="radio" id="dlno" name="dl" value="No">
-                    <span class="rbcheck"></span><br><br>
+        <label class="">Do you have a valid driver's license:</label><br>
+            <label style="padding-left: 10px">Yes</label>           
+            <input type="radio" id="dlyes" name="dl" value="Yes">
+            <span class="rbcheck"></span>
+            <label style="padding-left: 10px">No</label>
+            <input type="radio" id="dlno" name="dl" value="No">
+            <span class="rbcheck"></span><br><br>
 
-                <label class="tmisc" for="dl">What is your driver's license number:</label>
-                    <input type="text" id="dl" name="dl" placeholder="Driver's License Number" value="00000000000"required><br><br>
-                
-                <label class="tmisc" for="dlstate">What state issued your driver's license number:</label>
-                    <select id="dlstate" name="dlstate" required>
-                    <option value="selectstate">Select a State</option>
-                    <option value="alabama">Alabama</option>
-                    <option value="alaska">Alaska</option>
-                    <option value="arizona">Arizona</option>
-                    <option value="arkansas">Arkansas</option>
-                    <option value="california">California</option>
-                    <option value="colorado">Colorado</option>
-                    <option value="connecticut">Connecticut</option>
-                    <option value="delaware">Delaware</option>
-                    <option value="florida">Florida</option>
-                    <option value="georgia">Georgia</option>
-                    <option value="hawaii">Hawaii</option>
-                    <option value="idaho">Idaho</option>
-                    <option value="illinois">IllinoisFlorida</option>
-                    <option value="indiana">Indiana</option>
-                    <option value="iowa">Iowa</option>
-                    <option value="kansas">Kansas</option>
-                    <option value="kentucky">Kentucky</option>
-                    <option value="louisiana">Louisiana</option>
-                    <option value="maine">Maine</option>
-                    <option value="maryland">Maryland</option>
-                    <option value="massachusetts">Massachusetts</option>
-                    <option value="michigan">Michigan</option>
-                    <option value="minnesota">Minnesota</option>
-                    <option value="mississippi">Mississippi</option>
-                    <option value="missouri">Missouri</option>
-                    <option value="montana">Montana</option>
-                    <option value="nebraska">Nebraska</option>
-                    <option value="nevada">Nevada</option>
-                    <option value="newhampshire">New Hampshire</option>
-                    <option value="newjersey">New Jersey</option>
-                    <option value="newmexico">New Mexico</option>
-                    <option value="newyork">New York</option>
-                    <option value="northcarolina">North Carolina</option>
-                    <option value="northdakota">North Dakota</option>
-                    <option value="ohio">Ohio</option>
-                    <option value="oklahoma">Oklahoma</option>
-                    <option value="oregon">Oregon</option>
-                    <option value="pennsylvania">Pennsylvania</option>
-                    <option value="rhodeisland">Rhodeisland</option>
-                    <option value="southcarolina">South Carolina</option>
-                    <option value="southdakota">South Dakota</option>
-                    <option value="tennessee">Tennessee</option>
-                    <option value="texas">Texas</option>
-                    <option value="utah">Utah</option>
-                    <option value="vermont">Vermont</option>
-                    <option value="virginia">Virginia</option>
-                    <option value="washington">Washington</option>
-                    <option value="westvirginia">West Virginia</option>
-                    <option value="wisconsin">Wisconsin</option>
-                    <option value="wyoming">Wyoming</option>
-                </select><br><br>
+        <label class="tmisc" for="dl">What is your driver's license number:</label>
+            <input type="text" id="dl" name="dl" placeholder="Driver's License Number"  ><br><br>
+        
+        <label class="tmisc" for="dlstate">What state issued your driver's license number:*</label>
+            <select id="dlstate" name="dlstate"  >
+            <option value="selectstate">Select a State</option>
+            <option value="alabama">Alabama</option>
+            <option value="alaska">Alaska</option>
+            <option value="arizona">Arizona</option>
+            <option value="arkansas">Arkansas</option>
+            <option value="california">California</option>
+            <option value="colorado">Colorado</option>
+            <option value="connecticut">Connecticut</option>
+            <option value="delaware">Delaware</option>
+            <option value="florida">Florida</option>
+            <option value="georgia">Georgia</option>
+            <option value="hawaii">Hawaii</option>
+            <option value="idaho">Idaho</option>
+            <option value="illinois">IllinoisFlorida</option>
+            <option value="indiana">Indiana</option>
+            <option value="iowa">Iowa</option>
+            <option value="kansas">Kansas</option>
+            <option value="kentucky">Kentucky</option>
+            <option value="louisiana">Louisiana</option>
+            <option value="maine">Maine</option>
+            <option value="maryland">Maryland</option>
+            <option value="massachusetts">Massachusetts</option>
+            <option value="michigan">Michigan</option>
+            <option value="minnesota">Minnesota</option>
+            <option value="mississippi">Mississippi</option>
+            <option value="missouri">Missouri</option>
+            <option value="montana">Montana</option>
+            <option value="nebraska">Nebraska</option>
+            <option value="nevada">Nevada</option>
+            <option value="newhampshire">New Hampshire</option>
+            <option value="newjersey">New Jersey</option>
+            <option value="newmexico">New Mexico</option>
+            <option value="newyork">New York</option>
+            <option value="northcarolina">North Carolina</option>
+            <option value="northdakota">North Dakota</option>
+            <option value="ohio">Ohio</option>
+            <option value="oklahoma">Oklahoma</option>
+            <option value="oregon">Oregon</option>
+            <option value="pennsylvania">Pennsylvania</option>
+            <option value="rhodeisland">Rhodeisland</option>
+            <option value="southcarolina">South Carolina</option>
+            <option value="southdakota">South Dakota</option>
+            <option value="tennessee">Tennessee</option>
+            <option value="texas">Texas</option>
+            <option value="utah">Utah</option>
+            <option value="vermont">Vermont</option>
+            <option value="virginia">Virginia</option>
+            <option value="washington">Washington</option>
+            <option value="westvirginia">West Virginia</option>
+            <option value="wisconsin">Wisconsin</option>
+            <option value="wyoming">Wyoming</option>
+        </select><br><br>
 
-                <label class="tmisc" for="expiration">Driver's License's Expiration Date:</label>
-                    <input type="date" id="expiration" name="expiration" min="2000-01-01" max="2099-12-31">                
-            </fieldset><br>
+        <label class="tmisc" for="dldate">Driver's License's Expiration Date:</label>
+            <input type="date" id="dldate" name="dldate" min="2000-01-01" max="2099-12-31">                
+    </fieldset><br>
 
-            <!-- Military Experience Field -->
-            <fieldset>
-                <legend for="mil"><b>Military Experience Field:</b></legend>
+    <!-- Military Experience Field -->
+    <fieldset>
+        <legend><b>Military Experience Field:*</b></legend>
 
-                <label class="">Have you ever serve in the U.S. military:</label><br>
-                    <label style="padding-left: 10px">Yes</label>           
-                    <input type="radio" id="militaryyes" name="military" value="Yes">
-                    <span class="rbcheck"></span>
-                    <label style="padding-left: 10px">No</label>
-                    <input type="radio" id="militaryno" name="military" value="No">
-                    <span class="rbcheck"></span><br><br>
+        <label class="">Have you ever serve in the U.S. military:</label><br>
+            <label style="padding-left: 10px">Yes</label>           
+            <input type="radio" id="militaryyes" name="military" value="Yes">
+            <span class="rbcheck"></span>
+            <label style="padding-left: 10px">No</label>
+            <input type="radio" id="militaryno" name="military" value="No">
+            <span class="rbcheck"></span><br><br>
 
-                <label class="">Branch Served:</label>
-                    <table class="table2">
-                        <tr>
-                            <td class="td2">
-                                <label class="table2">Army</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
-                            <td class="td2">
-                                <label class="table2">Navy</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
-                            <td class="td2">
-                                <label class="table2">Marine Corps</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
-                            <td class="td2">
-                                <label class="table2">Air Force</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>    
-                        </tr>
-                        <tr>
-                            <td class="td2">
-                                <label class="table2">Coast Guard</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
-                            <td class="td2">
-                                <label class="table2">National Guard</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>
-                            <td class="td2">
-                                <label class="table2">Did Not Serve</a>
-                                    <input type="checkbox">
-                                    <span class="cbcheck"></span>
-                                </label>
-                            </td>   
-                        </tr>
-                    </table>
+        <label class="">Branch Served:</label>
+            <table class="table2">
+                <tr>
+                    <td class="td2">
+                        <label class="table2">Army</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
+                    <td class="td2">
+                        <label class="table2">Navy</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
+                    <td class="td2">
+                        <label class="table2">Marine Corps</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
+                    <td class="td2">
+                        <label class="table2">Air Force</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>    
+                </tr>
+                <tr>
+                    <td class="td2">
+                        <label class="table2">Coast Guard</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
+                    <td class="td2">
+                        <label class="table2">National Guard</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>
+                    <td class="td2">
+                        <label class="table2">Did Not Serve</a>
+                            <input type="checkbox">
+                            <span class="cbcheck"></span>
+                        </label>
+                    </td>   
+                </tr>
+            </table>
 
-                <label style="padding-right: 10px">How many total years did you serve:</label>
-                <select class="" id="served" name="served" required>
-                    <option value="-1">Select Total Years</option>
-                    <option value="0">0</option>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31+</option>
-                </select>               
-            </fieldset><br>
+        <label style="padding-right: 10px">How many total years did you serve:</label>
+        <select class="" id="served" name="served"  >
+            <option value="selectyears">Select Total Years</option>
+            <option value="1">0</option>
+            <option value="2">1</option>
+            <option value="3">2</option>
+            <option value="4">3</option>
+            <option value="5">4</option>
+            <option value="6">5</option>
+            <option value="7">6</option>
+            <option value="8">7</option>
+            <option value="9">8</option>
+            <option value="10">9</option>
+            <option value="11">10</option>
+            <option value="12">11</option>
+            <option value="13">12</option>
+            <option value="14">13</option>
+            <option value="15">14</option>
+            <option value="16">15</option>
+            <option value="17">16</option>
+            <option value="18">17</option>
+            <option value="19">18</option>
+            <option value="20">19</option>
+            <option value="21">20</option>
+            <option value="22">21</option>
+            <option value="23">22</option>
+            <option value="24">23</option>
+            <option value="25">24</option>
+            <option value="26">25</option>
+            <option value="27">26</option>
+            <option value="28">27</option>
+            <option value="29">28</option>
+            <option value="30">29</option>
+            <option value="31">30</option>
+            <option value="32">31+</option>
+        </select>               
+    </fieldset><br>
 
-            <!-- Applicant Acknowledgement and Waiver Section  -->
+    <!-- Applicant Acknowledgement and Waiver Section  ******************************************************************************************************** -->
             <h2><u>Applicant Acknowledgement and Waiver Section</u></h2>
             <a class="anchor" id="aa"></a>
             <fieldset>
-                <legend for="read"><b>PLEASE READ CAREFULLY AND SELECT 'I AGREE'</b></legend>
+                <legend><b>PLEASE READ CAREFULLY AND SELECT 'I AGREE'</b></legend>
                 <p>IN EXCHANGE FOR THE CONSIDERATION OF MY JOB APPLICATION BY UNFINISHED BUSINESS, I AGREE THAT:</p>
                 <p>A POSITION IS NOT A CONTRACT OF EMPLOYMENT. UNFINISHED BUSINESS MAY TERMINATE MY JOB AT ANY TIME FOR ANY REASON. ALSO, I UNDERSTAND THAT UNFINISHED BUSINESS MAY MAKE CHANGES TO BENEFITS AND POLICIES AT ANY TIME. I MUST HAVE WRITTEN PERMISSION BEFORE BEING HIRED, FIRED, OR QUITTING.
     
@@ -842,17 +841,18 @@
                     <span class="rbcheck"></span>
                 <label style="padding-left: 10px">I Do Not Agree</label>
                     <input type="radio" id="agreeno" name="agree" value="I Do Not Agree">
-                    <span class="rbcheck"></span><br><br>
-                <div class="div">
-                    <input type="submit" value="Submit">
-                    <input type="reset">
-                </div>
+                    <span class="rbcheck"></span><br>          
                 
-            </fieldset>
+            </fieldset><br><br>
+        
+
+            <input type="submit" value="Submit">
+            <input type="reset" value="Reset">
+
         </form> 
         
         <br><br>
-    </div>
+
     </body>
 </html>
 <!-- SPACES -->
