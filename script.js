@@ -1,5 +1,5 @@
 
-
+/*
 function setDate() {                   //Function works and is complete
     const today = new Date();
     todays_date = today.toLocaleDateString();
@@ -11,17 +11,16 @@ function setDate() {                   //Function works and is complete
 
 //navbar////////////////////////////////////////////////////////////////
 
-  
-
 setDate();
+*/
+  
 
 function validateForm() {
 	
-	var valid = false;
+	var valid;
 	
-	/* Applicant Name */
+	/* *** Applicant Name ************************************************************************************************* */
 	let afirst = document.getElementById("afirst");
-	let amiddle = document.getElementById("amiddle");
 	let alast = document.getElementById("alast");
 	
 	if (afirst.value == "") {
@@ -32,10 +31,6 @@ function validateForm() {
 		alert("Applicant's First Name must contain only letters");
 		return false; }
 	
-	if (isNaN(amiddle.value) == false) {
-		alert("Applicant's Middle Name must contain only letters");
-		return false; }
-	
 	if (alast.value == "") {
 		alert("Applicant's Last Name is missing");
 		return false; }
@@ -44,14 +39,13 @@ function validateForm() {
 		alert("Applicant's Last Name must conatin only letters");
 		return false; }
 	
-	
-	/* Applicant Address */
+	/* *** Applicant Address ************************************************************************************************* */
 	let astreet = document.getElementById("astreet");
 	let acity = document.getElementById("acity");
 	var astate = document.getElementById("astate");
 	let azip = document.getElementById("azip");
-	var ayears = document.getElementById("ayears');
-	var amonths = document.getElementById("amonths);
+	var ayears = document.getElementById("ayears");
+    var amonths = document.getElementById("amonths");
 		
 	if (astreet.value == "") {
 		alert("Applicant's Street Address is missing");
@@ -70,76 +64,69 @@ function validateForm() {
 		alert("Select a State for Applicant's address");
 		return false; }
 	
-	if (azip.value == "") {
-		alert("Applicant's ZIP is missing");
-		return false; }
-		
-	if (isNaN(azip) == true) {
-		alert("Applicant's ZIP must contian only numbers");
-		return false; }
+    valid = validateZip(azip);
+    if (valid === false) {
+        alert("Applicant ZIP must conatain only numbers and must be 5 numbers in length")
+        return false; }
+    
 	
-	valid = validateTime(ayears.selectedIndex);
+	valid = validateSelection(ayears.selectedIndex);
 	if (valid === false) {
 		alert("Number of years Applicant has lived at current address not selected");
 		return false; }
 	
-	valid = validateTime(amonths.selectedIndex);
+	valid = validateSelection(amonths.selectedIndex);
 	if (valid === false) {
 		alert("Number of months Applicant has lived at current address not selected");
 		return false; }
 		
-	
-	/* Appicant Age */
-    var aage = document.getElementById("aage");
+	/* *** Appicant Age ************************************************************************************************* */
+    //var aage = document.getElementById("aage");
 	
 	if (aage === true || aage === false) {
 		alert("Response to 'Are you at least 18 years of age' not selected");
 		return false; }
 	
-	
-	/* Applicant Contact Information */
+	/* *** Applicant Contact Information ************************************************************************************************* */
 	let primary = document.getElementById("primary");
 	let secondary = document.getElementById("secondary");
 	let aemail = document.getElementById("aemail");
 		
-	if (primary.value =="") {
+	if (primary.value == "") {
 		alert("Applicant's Primary phone number is missing");
 		return false; }
-	
-	valid = validatePhone(primary);
-	if (valid === fasle) {
+    
+	valid = validatePhone(primary); 
+	if (valid === false) {
 		return false; }		
-	
 	
 	if (aemail.value == "") {
 		alert("Applicant's Email address is missing");
 		return false; }
-	
+		
 	valid = validateEmail(aemail);
 	if (valid === false) {
 		alert("Applicant's Email address invalid");
-		return false; }
-	
-	
-	/* Position and Salary */
-	var position = document.getElementById("position");
-	let salary = document.getElementById("salary");
-	
-	valid = validateSelection(position.selectedIndex); 
-	if (valid === false) {
-		alert("Position applying for not selected");
-		return false; }
+		return false; }  
+
+    /* *** Postion and Salary ************************************************************************************************* */
+    let position = document.getElementById("position");
+    let salary = document.getElementById("salary");
+
+    valid = validateSelection(position.selectedIndex); 
+    if (valid === false) {
+        alert("Select a Position you are applying for");
+        return false; }
 	
 	if (salary.value == "") {
-		alert("Desired salary is missing");
+		alert("Enter the salary you are requesting; whole number only, no spaces or commas");
 		return false; }
-	
-	if (isNaN(salary.value) == false) {
-		alert("Desired salary must contain only numbers");
-		return false; }
-		
-	
-	/* Applicant Name */
+
+    if (isNaN(salary.value) == true) {
+        alert("Enter the salary you are requesting; whole number only, no spaces or commas");
+        return false; }
+
+	/* *** Employer Name ************************************************************************************************* */
 	let employer = document.getElementById("employer");
 	
 	if (employer.value == "") {
@@ -150,44 +137,187 @@ function validateForm() {
 		alert("Employer's Name must contain only letters");
 		return false; }
 	
-	/* Applicant Address */
-	let estreet = document.getElementById("astreet");
-	let ecity = document.getElementById("acity");
-	var estate = document.getElementById("astate");
-	let ezip = document.getElementById("azip");
+	/* *** Employer Address ********************************************************************************************** */
+	let estreet = document.getElementById("estreet");
+	let ecity = document.getElementById("ecity");
+	var estate = document.getElementById("estate");
+	let ezip = document.getElementById("employerzip");
 		
 	if (estreet.value == "") {
-		alert("Applicant's Street Address is missing");
+		alert("Employer's Street Address is missing");
 		return false; }
 	
 	if (ecity.value == "") {
-		alert("Applicant's City name is missing");
+		alert("Employer's City name is missing");
 		return false; }
 	
 	if (isNaN(ecity.value) == false) {
-		alert("Applicant's City must contain only letters");
+		alert("Employer's City must contain only letters");
 		return false; }
 	
 	valid = validateSelection(estate.selectedIndex); 
 	if (valid === false) {
-		alert("Select a State for Applicant's address");
+		alert("Select a State for Employer's address");
 		return false; }
 	
-	if (ezip.value == "") {
-		alert("Applicant's ZIP is missing");
+    valid = validateZip(ezip);
+    if (valid === false) {
+        alert("Employer ZIP must conatain only numbers and must be 5 numbers in length");
+        return false; }
+	
+	/* *** Supervisor Name *********************************************************************************************** */
+    let supervisor = document.getElementById("supervisor");
+	
+	if (supervisor.value == "") {
+		alert("Supervisor's Name is missing");
+		return false; }
+	
+	if (isNaN(supervisor.value) == false) {
+		alert("Supervisor's Name must contain only letters");
+		return false; }
+	
+    
+    /* *** Supervisor Contact Information ****************************************************************************** */
+	let sphone = document.getElementById("supervisorphone");
+	let semail = document.getElementById("supervisoremail");
+		
+	if (sphone.value == "") {
+		alert("Supervisor's Primary phone number is missing");
+		return false; }    
+	
+	valid = validatePhone(sphone); 
+	if (valid === false) {
+		return false; }		
+	
+	if (semail.value == "") {
+		alert("Supervisor's Email address is missing");
 		return false; }
 		
-	if (isNaN(ezip) == true) {
-		alert("Applicant's ZIP must contian only numbers");
+	valid = validateEmail(semail);
+	if (valid === false) {
+		alert("Supervisor's Email address invalid");
 		return false; }
+	
+	/* *** Employment ********************************************************************************************* */
+	let sdate = document.getElementById("sdate");
+	let edate = document.getElementById("edate");
+    let job = document.getElementById("job");
+    let duties = document.getElementById("duties");
+    let leaving = document.getElementById("leaving");
+
+    if (sdate.value == "") {
+        alert("Start Date Not Selected");
+        return false; }
+    
+    if (edate.value == "") {
+        alert("End Date Not Selected");
+        return false; }
+
+    if (job.value == "") {
+        alert("Job Title missing");
+        return false; }
+    
+    if (duties.value == "") {
+        alert("Describe the duties you performed and skills you learned");
+        return false; }
+    
+    if (leaving.value == "") {
+        alert("Explain your reason for leaving");
+        return false; }
 
 	
+	/* *** Education ************************************************************************************************* */
+	var highest = document.getElementById("highest");
+    var highered = document.getElementById("highered");
+    let schoolname = document.getElementById("schoolname");
+    let scity = document.getElementById("schoolcity");
+    var sstate = document.getElementById("schoolstate");
+    let major = document.getElementById("major");
+    let degrees = document.getElementById("degrees");
+
+    valid = validateSelection(highest.selectedIndex); 
+	if (valid === false) {
+		alert("Select Highest Education Achieved");
+		return false; }
+
+    valid = validateSelection(highered.selectedIndex); 
+	if (valid === false) {
+		alert("Select the School Type");
+		return false; }
+
+    if (schoolname.value == "") {
+        alert("School Name missing");
+        return false; }
+
+    if (scity.value == "") {
+        alert("The School's City name is missing");
+        return false; }
+        
+    if (isNaN(scity.value) == false) {
+        alert("The School's City must contain only letters");
+        return false; }
+
+    valid = validateSelection(sstate.selectedIndex); 
+    if (valid === false) {
+        alert("Select the state in which you attended the school");
+        return false; }
+
+    if (major.value == "") {
+        alert("Major or Degree is missing");
+        return false; }
+    
+    if (degrees.value == "") {
+        alert("Provide details of your educational achievements");
+        return false; }
 	
+	/* *** Work Availability ********************************************************************************************* */
+	let availdate = document.getElementById("availdate");
+    let hours = document.getElementById("hours");
 	
+    if (availdate.value == "") {
+        alert("Available Date to Start Not Selected");
+        return false; }
+
+    if (hours.value == "") {
+        alert("Please fill in how many hours weekly you can work, input only whole numbers less than 125");
+        return false; }
+    
+    if (isNaN(hours.value) == true) {
+        alert("How many weekly hours you can work is missing or invalid; use only numbers");
+        return false; }
+    
+    if (hours.value >= 125) {
+        alert("An invalid number of hours for weekly hours available to work inputted; must be less than 125 hours per week");
+        return false; }
 	
-	
-	
-	
+    /* *** Transportation ********************************************************************************************* */
+	let dl = document.getElementById("dl");
+    var dlstate = document.getElementById("dlstate");
+    let dldate = document.getElementById("dldate");
+
+    if (dl.value == "") {
+        alert("Driver's License Number Missing");
+        return false; }
+
+    valid = validateSelection(dlstate.selectedIndex); 
+    if (valid === false) {
+        alert("Select the state that issued you your driver's license");
+        return false; }
+    
+    if (dldate.value == "") {
+        alert("Driver's License Expiration Date Not Selected");
+        return false; }
+    
+    /* *** Military ********************************************************************************************* */
+    var served = document.getElementById("served");
+    
+    valid = validateSelection(served.selectedIndex); 
+    if (valid === false) {
+        alert("Select how many years total you served in the military");
+        return false; }
+
+
+
 	return false;
 }
 
@@ -196,145 +326,50 @@ function validateSelection(value) {
 	if (value == "0") {
 		return false; }
 
-	return true; 
-}
+	return true; }
 
 
-function validateTime(value) {
-	if (value == "-1") {
+function validateZip(value) {
+    len = value.value.length;
+
+    if (len != 5) {
+        return false; }
+
+    if (value.value == "") {
+		return false; }		
+
+    if (isNaN(value.value) == true) {
 		return false; }
-	
-	return true;
-}
+
+    return true; }
 
 
 function validatePhone(value) {
-	let testNum = value.value.replace(/-/g, "");
-	testNum = testNum.replace(/ /g, "");
+	let phone = value.value;
+    phone = phone.replace(/[^0-9]/g, "");
 		
-	if (isNaN(testNum) == true) {
-		alert(value.name + "Invalid, must contain only numbers");
-		return false;
-	} else if (testNum.length > 10 {
-		alert(value.name + "Invallid, must be 10 numbers long");
+	if (isNaN(phone) == true) {
+		alert(value.name + " number invalid, must contain only numbers");
+		return false; }
+	
+	if (phone.length != 10) {
+		alert(value.name + " must be 10 numbers in length");
 		return false; }	
 
-	return true;
-}
+	return true; }
 
 
 function validateEmail(value) {
 	let email = value.value;
-	let reg = /\w+@\w+.\w+/;
-	return reg.test(email);
+	let format = /\w+@\w+.\w+/;
+	if(format.test(email) === false) {
+		return false;
+	}
 
-	return true;
-}
-
-
-
-
-
-	
-	
-	validation = validateControl(zip,zip.name,5);
-	if (validation === false) {
-		return false; }
+	return true; }
 
 
 
-	if (cardName.value == "") {
-		alert("Name on Card field empty.");
-		return false; }
-		
-	if (isNaN(cardName.value) == false) {
-		alert("Invalid Name on Card");
-		return false; }
-	
 
-
-
-	
-	validation = validateControl(cvv, cvv.name, 3);
-	if (validation === false) {
-		return false; }
-	
-	validation = validateState(state.selectedIndex); 
-	if (validation === false) {
-		return false; }
-
-	validation = validateDate(expiration);
-	if (validation === false){
-		return false; }
-
-	if (validation === true) {
-		alert("Form submitted");
-		return false; }
-
-	return false; 
-}
-
-function validateState(value) {
-	if (value == "0") {
-		return false; }
-
-	return true; 
-}
-
-function validateTime(value) {
-	if (value == "-1") {
-		return false; }
-	
-	return true;
-}
-
-
-function testLength(value, length) {
-	let testlen = value.value.replace(/-/g, "");
-	testlen = testlen.replace(/ /g, "");
-
-	if (testlen.length != length) {
-		alert(value.name + " may only be " + length + " characters long");
-		return false; }	
-	
-	return true;
-}
-
-
-function testNumber(value) {
-	let testNum = value.value.replace(/-/g, "");
-	testNum = testNum.replace(/ /g, "");
-	
-	if (isNaN(testNum) == true) {
-		alert(value.name + " may only be numbers");
-		return false; }
-
-	return true;
-}
-
-
-function validateControl(control, name, length) {
-	let conlen = testLength(control, length);
-	if (conlen == false) {
-		return false; }
-
-	contest = testNumber(control);
-	if (contest == false){
-		return false; }
-	
-	return true; 
-}
-
-
-function validateDate(value) {
-	selected = value.value;
-	date = '2021-09'; 
-
-	if (selected <= date) {
-		alert("Credit Card is expired");
-		return false; }
-
-	return true;
-}
 
 
