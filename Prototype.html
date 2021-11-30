@@ -45,19 +45,19 @@
     <!-- Applicant Name -->
     <fieldset>
         <legend><b>Name:</b></legend>
-        <label class="name" for="afirst">First Name:*</label>
+        <label class="name" for="afirst">First Name:</label>
         <input type="text" id="afirst" name="afirst" placeholder="First" maxlength="35" ><br><br>
 
         <label class="name" for="amiddle">Middle Name:</label>
         <input type="text" id="amiddle" name="amiddle" placeholder="Middle" maxlength="35"><br><br>
     
-        <label class="name" for="alast">Last Name:*</label>
+        <label class="name" for="alast">Last Name:</label>
         <input type="text" id="alast" name="alast" placeholder="Last" maxlength="35" >
     </fieldset> <br>          
     
     <!-- Applicant Address -->
     <fieldset>
-        <legend><b>Current Home Address:*</b></legend>
+        <legend><b>Current Home Address:</b></legend>
         <label class="address" for="astreet">Street Address:</label>
         <input type="text" id="astreet" name="astreet" placeholder="Street" maxlength="50" ><br><br>
     
@@ -249,7 +249,7 @@
 
     <!-- Minimum Age Requirement -->
     <fieldset>
-        <legend><b>Are you at least 18 years of age:*</b></legend>
+        <legend for="primary"><b>Are you at least 18 years of age:</b></legend>
         <label class="rb">Yes</label>           
         <input type="radio" id="aage1" name="aage1" value="Yes">
         <span class="rbcheck"></span>
@@ -263,7 +263,7 @@
         <legend><b>Contact Information</b></legend>
 
         <!-- Applicant Phone Numbers -->
-        <label class="contact" for="primary">Primary Phone Number:*</label>
+        <label class="contact" for="primary">Primary Phone Number:</label>
         <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" maxlength="14"  >
         <br><br>
         <label class="" for="primarymobile">Check if this is a mobile number:</label>
@@ -276,19 +276,19 @@
         <input type="checkbox" id="secondarymobile" name="secondarymobile"><br><br>
 
         <!-- Applicant Email -->
-        <label class="contact" for="aemail">Email Address:*</label>
+        <label class="contact" for="aemail">Email Address:</label>
         <input type="text" id="aemail" name="aemail" placeholder="username@mail.com" maxlength="50"  >
     </fieldset> <br>
 
     
     <!-- Position Information-->
     <fieldset>
-        <legend><b>Position Applying For:*</b></legend>
+        <legend><b>Position Applying For:</b></legend>
 
         <!-- Position -->
         <label class="misc" for="position">Position:</label>
         <select id="position" name="position"  >
-            < <option value="selectposition">Select a Position</option>
+            <option value="selectposition">Select a Position</option>
             <option value="it">IT Specialist</option>
             <option value="network">Network Administrator</option>
             <option value="software">Software Developer</option>
@@ -309,7 +309,7 @@
 
     <!-- Employer's Information -->
     <fieldset>
-        <legend><b>Employer Information:*</b></legend>
+        <legend><b>Employer Information:</b></legend>
 
         <!-- Employer Name -->
         <label class="eaddress" for="employer">Employer's Name:</label>
@@ -383,7 +383,7 @@
 
     <!-- Supervisor Information -->
     <fieldset>
-        <legend><b>Supervior's Infromation*</b></legend>
+        <legend><b>Supervior's Infromation</b></legend>
         <!-- Supervisor's Name -->
             <label class="sname" for="supervisor">Supervisor's Name:</label>
             <input type="text" id="supervisor" name="supervisor" placeholder="Supervisor Name"  ><br><br>
@@ -408,7 +408,7 @@
 
     <fieldset>
          <!-- Dates of Employment -->
-         <legend><b>Employment Information:*</b></legend>
+         <legend><b>Employment Information:</b></legend>
             <label>Dates of Employment:</label><br>
             <label style="padding-left: 15px; padding-right: 15px" for="sdate">Start Date:</label>
             <input type="date" id="sdate" name="sdate" min="1955-01-01" max="2021-12-31"><br><br>
@@ -439,7 +439,7 @@
 <a class="anchor" id="ee"></a>
 
     <!-- Highest Education Achieved -->
-    <label style="padding-right: 10px" for="highest">Highest education you have achieved:*</label>
+    <label style="padding-right: 10px" for="highest">Highest education you have achieved:</label>
     <select id="highest" name="highest"  >
         <option value="selecthighest">Highest Education Achieved</option>
         <option value="1">GED</option>
@@ -453,7 +453,7 @@
 
     <!-- Education Career Field -->
     <fieldset>
-        <legend><b>Education Career Field:*</b></legend>
+        <legend><b>Education Career Field:</b></legend>
         <label class="emisc" for="highered">School Type:</label>
         <select id="highered" name="higered"  >
             <option value="selectschool">School Type</option>
@@ -530,7 +530,7 @@
     </fieldset><br>
 
     <!-- Degrees and Certifications Earned  -->
-    <label class="" for="degrees">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:*</label><br>
+    <label class="" for="degrees">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:</label><br>
     <textarea id="degrees" name="degrees" placeholder="Details of your educational achievements" rows="4" cols="75"
     maxlength="255"></textarea><br><br>
             
@@ -542,7 +542,7 @@
 
     <!-- Workday Availability Field -->
     <fieldset>
-        <legend><b>Work Availability Field:*</b></legend>
+        <legend><b>Work Availability Field:</b></legend>
 
         <!-- Available Start Date -->
         <label class="" for="availdate">Date available to start:</label>
@@ -626,7 +626,7 @@
 
     <!-- Tranportation Field -->
     <fieldset>
-        <legend><b>Transportation Field:*</b></legend>
+        <legend><b>Transportation Field:</b></legend>
 
         <label class="">Do you have reliable transportation to work:</label><br>
             <label style="padding-left: 10px">Yes</label>           
@@ -655,7 +655,7 @@
         <label class="tmisc" for="dl">What is your driver's license number:</label>
             <input type="text" id="dl" name="dl" placeholder="Driver's License Number"  ><br><br>
         
-        <label class="tmisc" for="dlstate">What state issued your driver's license number:*</label>
+        <label class="tmisc" for="dlstate">What state issued your driver's license number:</label>
             <select id="dlstate" name="dlstate"  >
             <option value="selectstate">Select a State</option>
             <option value="alabama">Alabama</option>
@@ -716,7 +716,7 @@
 
     <!-- Military Experience Field -->
     <fieldset>
-        <legend><b>Military Experience Field:*</b></legend>
+        <legend><b>Military Experience Field:</b></legend>
 
         <label class="">Have you ever served in the U.S. military:</label><br>
             <label style="padding-left: 10px">Yes</label>           
@@ -818,7 +818,7 @@
             <h2><u>Applicant Acknowledgement and Waiver Section</u></h2>
             <a class="anchor" id="aa"></a>
             <fieldset>
-                <legend><b>PLEASE READ CAREFULLY AND SELECT 'I AGREE'</b></legend>
+                <legend for="read"><b>PLEASE READ CAREFULLY AND SELECT 'I AGREE'</b></legend>
                 <p>IN EXCHANGE FOR THE CONSIDERATION OF MY JOB APPLICATION BY UNFINISHED BUSINESS, I AGREE THAT:</p>
                 <p>A POSITION IS NOT A CONTRACT OF EMPLOYMENT. UNFINISHED BUSINESS MAY TERMINATE MY JOB AT ANY TIME FOR ANY REASON. ALSO, I UNDERSTAND THAT UNFINISHED BUSINESS MAY MAKE CHANGES TO BENEFITS AND POLICIES AT ANY TIME. I MUST HAVE WRITTEN PERMISSION BEFORE BEING HIRED, FIRED, OR QUITTING.
     
