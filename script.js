@@ -1,25 +1,19 @@
 
-/*
 function setDate() {                   //Function works and is complete
     const today = new Date();
     todays_date = today.toLocaleDateString();
-    
-    
-     document.getElementById("application").value = todays_date;
-    
+
+	document.getElementById("application").value = todays_date;
+
 }//end validateDate
 
-//navbar////////////////////////////////////////////////////////////////
-
-setDate();
-*/
-  
+setDate();  
 
 function validateForm() {
 	
 	var valid;
-	
-	/* *** Applicant Name ************************************************************************************************* */
+
+	/* *** Applicant Name ******************************************************************************************** */
 	let afirst = document.getElementById("afirst");
 	let alast = document.getElementById("alast");
 	
@@ -39,7 +33,7 @@ function validateForm() {
 		alert("Applicant's Last Name must conatin only letters");
 		return false; }
 	
-	/* *** Applicant Address ************************************************************************************************* */
+	/* *** Applicant Address ******************************************************************************************** */
 	let astreet = document.getElementById("astreet");
 	let acity = document.getElementById("acity");
 	var astate = document.getElementById("astate");
@@ -80,14 +74,16 @@ function validateForm() {
 		alert("Number of months Applicant has lived at current address not selected");
 		return false; }
 		
-	/* *** Appicant Age ************************************************************************************************* */
-    //var aage = document.getElementById("aage");
-	
-	if (aage === true || aage === false) {
-		alert("Response to 'Are you at least 18 years of age' not selected");
+	/* *** Appicant Age ************************************************************************************************* */	
+	let age1 = document.getElementById("aage1");
+	let age2 = document.getElementById("aage2");
+
+	if ((ischecked(age1) == false) && (ischecked(age2) == false)) {
+        alert("Please select if you are at least 18 years of age or not");
 		return false; }
+
 	
-	/* *** Applicant Contact Information ************************************************************************************************* */
+	/* *** Applicant Contact Information *********************************************************************************** */
 	let primary = document.getElementById("primary");
 	let secondary = document.getElementById("secondary");
 	let aemail = document.getElementById("aemail");
@@ -197,6 +193,13 @@ function validateForm() {
 	if (valid === false) {
 		alert("Supervisor's Email address invalid");
 		return false; }
+
+	let contact1 = document.getElementById("contact1");
+	let contact2 = document.getElementById("contact2");
+
+	if ((ischecked(contact1) == false) && (ischecked(contact2) == false)) {
+        alert("Please select if we can contact your last supervisor");
+		return false; }
 	
 	/* *** Employment ********************************************************************************************* */
 	let sdate = document.getElementById("sdate");
@@ -277,6 +280,18 @@ function validateForm() {
     if (availdate.value == "") {
         alert("Available Date to Start Not Selected");
         return false; }
+	
+	valid = validateChkBoxWork();
+	if(valid === false) {
+		alert("Please select the days you are available to work");
+		return false; }
+	
+	let full = document.getElementById("full");
+	let part = document.getElementById("part");
+
+	if ((ischecked(full) == false) && (ischecked(part) == false)) {
+        alert("Please select if we prefer full or part time work");
+		return false; }
 
     if (hours.value == "") {
         alert("Please fill in how many hours weekly you can work, input only whole numbers less than 125");
@@ -291,6 +306,27 @@ function validateForm() {
         return false; }
 	
     /* *** Transportation ********************************************************************************************* */
+	let transyes = document.getElementById("transyes");
+	let transno = document.getElementById("transno");
+
+	if ((ischecked(transyes) == false) && (ischecked(transno) == false)) {
+        alert("Please select if you have reliable transportation to work");
+		return false; }
+
+	let vehicleyes = document.getElementById("vehicleyes");
+	let vehicleno = document.getElementById("vehicleno");
+
+	if ((ischecked(vehicleyes) == false) && (ischecked(vehicleno) == false)) {
+        alert("Please select if you willing to drive your personal vehicle as part of your duties");
+		return false; }
+
+	let dlyes = document.getElementById("dlyes");
+	let dlno = document.getElementById("dlno");
+
+	if ((ischecked(dlyes) == false) && (ischecked(dlno) == false)) {
+        alert("Please select if you have a valid driver's license");
+		return false; }
+	
 	let dl = document.getElementById("dl");
     var dlstate = document.getElementById("dlstate");
     let dldate = document.getElementById("dldate");
@@ -306,20 +342,78 @@ function validateForm() {
     
     if (dldate.value == "") {
         alert("Driver's License Expiration Date Not Selected");
-        return false; }
+        return false; }	
     
     /* *** Military ********************************************************************************************* */
-    var served = document.getElementById("served");
+    
+	let militaryyes = document.getElementById("militaryyes");
+	let militaryno = document.getElementById("militaryno");
+
+	if ((ischecked(militaryyes) == false) && (ischecked(militaryno) == false)) {
+        alert("Please select if you ever served in the U.S. military");
+		return false; }
+
+	var served = document.getElementById("served");
+
+	valid = validateChkBoxMil();
+	if(valid === false) {
+		alert("Please select which branch of service(s) you served");
+		return false; }
     
     valid = validateSelection(served.selectedIndex); 
     if (valid === false) {
         alert("Select how many years total you served in the military");
         return false; }
 
+	let agreeyes = document.getElementById("agreeyes");
 
+	if (ischecked(agreeyes) == false) {
+        alert("Please Select 'I agree' to continue");
+		return false; }
 
 	return false;
 }
+
+
+
+function ischecked(value) {
+	if (value.checked == true) {
+		return true; }
+	else {
+		return false; }
+}
+
+function validateChkBoxWork() {
+	var chkBox = document.getElementsByName("chkboxwork[]");
+	var lenChkBox = chkBox.length;
+
+	var valid = false;
+	for(var i=0; i < lenChkBox; i++) {
+		if(chkBox[i].checked == true) {
+			valid = true;
+			break; }
+	}
+
+	if(valid==0) {
+		return false; }
+
+	return true; }
+
+function validateChkBoxMil() {
+	var chkBox = document.getElementsByName("chkboxmil[]");
+	var lenChkBox = chkBox.length;
+
+	var valid = false;
+	for(var i=0; i < lenChkBox; i++) {
+		if(chkBox[i].checked == true) {
+			valid = true;
+			break; }
+	}
+
+	if(valid==0) {
+		return false; }
+
+	return true; }
 
 
 function validateSelection(value) {
@@ -367,6 +461,7 @@ function validateEmail(value) {
 	}
 
 	return true; }
+
 
 
 

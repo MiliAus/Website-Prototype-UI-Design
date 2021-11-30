@@ -4,15 +4,11 @@
         <link rel="stylesheet" href="PrototypeFrame.css"
         href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-        <script src="script.js" ></script>
-        <title>Prototype Frame</title>
-        
+        <script src="script.js" async></script>
+        <title>Prototype Frame</title>    
        
     </head>
     <body>
-
-       
-         
 
 <!-- ****************************  Sticky Navbar  ********************************************************************************** --> 
 <div class="navbar">
@@ -21,33 +17,32 @@
             <a id="item" href="#ee">Education Experience</a>
             <a id="item" href="#misc">Miscellaneous</a>
             <a id="item" href="#aa">Applicant Acknowledgement&Waiver</a>
-           <!--  <a id="item" href="file:///C:/Users/Arthur/Documents/GitHub/Prototype/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a> -->
+            <a id="item" href="file:///C:\Users\Owner\Documents\GitHub\Website-Prototype-UI-Design/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a> <!-- Alex's Path -->
+           <!--  <a id="item" href="file:///C:\Users\Owner\Documents\GitHub\Website-Prototype-UI-Design/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a> --> <!-- Austin's Path -->
 </div>
 <br>
 <br>
 <br>
 
+<form onSubmit="validateForm(); return false;">
+<div>
 
-
-<form onSubmit="validateForm(); return false">
-<!-- ****************************  Personal Information Section  ********************************************************************************** -->   
-
- <!-- Application Date -->
-<label class="date" for="application"><b>Date:</b></label>
-    <input disabled type="text" id="application" name="application"> <br><br>
-
+<!-- ****************************  Personal Information Section  ********************************************************************************** --> 
 <p class="alert">All sections with an (*) in the legend name are required , and all associated fields must be
     filled in prior to submission.  If a section does not have an asterisk (*) in the legend name,
     then all fields in that section with an asterisk (*) are the only required fields in that section
     and must be filled in prior to submission.  Submission of an incomplete application will be considered
     disqualifying.
-</p><br>
-        
-        
-    <!-- Applicant Name -->
+</p> <br><br>
+
+<!-- Application Date -->
+<label class="date" for="application"><b>Date:</b></label>
+    <input disabled type="text" id="application" name="application"> <br><br>    
 
 <h2><u>Personal Information Section</u></h2>
-<a class="anchor" id="pi"></a> 
+<a class="anchor" id="pi"></a>
+
+    <!-- Applicant Name -->
     <fieldset>
         <legend><b>Name:</b></legend>
         <label class="name" for="afirst">First Name:*</label>
@@ -256,10 +251,10 @@
     <fieldset>
         <legend><b>Are you at least 18 years of age:*</b></legend>
         <label class="rb">Yes</label>           
-        <input type="radio" id="aage" name="aage" value="Yes">
+        <input type="radio" id="aage1" name="aage1" value="Yes">
         <span class="rbcheck"></span>
         <label class="rb">No</label>
-        <input type="radio" id="aage" name="aage" value="No">
+        <input type="radio" id="aage2" name="aage2" value="No">
         <span class="rbcheck"></span>
     </fieldset><br>
 
@@ -403,10 +398,10 @@
 
             <label>May we contact this supervisor:</label><br>
             <label style="padding-left: 10px">Yes</label>           
-            <input type="radio" id="yes" name="contact" value="Yes">
+            <input type="radio" id="contact1" name="contact1" value="Yes">
             <span class="rbcheck"></span>
             <label style="padding-left: 10px">No</label>
-            <input type="radio" id="no" name="contact" value="No">
+            <input type="radio" id="contact2" name="contact2" value="No">
             <span class="rbcheck"></span>
 
     </fieldset> <br>
@@ -558,28 +553,28 @@
                 <tr>
                     <td class="td1">
                         <label class="table1">Mon</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="mon" value="Mon">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
 
                     <td class="td1">
                         <label class="table1">Tue</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="tue" value="Tue">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
 
                     <td class="td1">
                         <label class="table1">Wed</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="wed" value="Wed">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
 
                     <td class="td1">
                          <label class="table1">Thu</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="thu" value="Thu">
                             <span class="cbcheck"></span>
                         </label>
                     </td>                            
@@ -588,28 +583,28 @@
                 <tr>
                     <td class="td1">
                         <label class="table1">Fri</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="fri" value="Fri">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
 
                     <td class="td1">
                         <label class="table1">Sat</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="sat" value="Sat">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
 
                     <td class="td1">
                         <label class="table1">Sun</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="sun" value="Sun">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
 
                     <td class="td1">
                          <label class="table1">All</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxwork[]" id="all" value="All">
                             <span class="cbcheck"></span>
                         </label>
                     </td>                            
@@ -618,10 +613,10 @@
 
         <label class="">Employment Desired:</label><br>
         <label style="padding-left: 10px">Full Time</label>           
-            <input type="radio" id="fulltime" name="employment" value="Full Time">
+            <input type="radio" id="full" name="full" value="Full">
             <span class="rbcheck"></span>
             <label style="padding-left: 10px">Part Time</label>
-            <input type="radio" id="parttime" name="employment" value="Part Time">
+            <input type="radio" id="part" name="part" value="Part">
             <span class="rbcheck"></span><br><br>
 
         <label class="" for="hours">How many hours weekly can you work:</label>
@@ -635,26 +630,26 @@
 
         <label class="">Do you have reliable transportation to work:</label><br>
             <label style="padding-left: 10px">Yes</label>           
-            <input type="radio" id="transyes" name="trans" value="Yes">
+            <input type="radio" id="transyes" name="transyes" value="Yes">
             <span class="rbcheck"></span>
             <label style="padding-left: 10px">No</label>
-            <input type="radio" id="transno" name="trans" value="No">
+            <input type="radio" id="transno" name="transno" value="No">
             <span class="rbcheck"></span><br><br>
 
         <label class="">Are you willing to drive your personal vehicle as part of your duties:</label><br>
             <label style="padding-left: 10px">Yes</label>           
-            <input type="radio" id="vehicleyes" name="vehicle" value="Yes">
+            <input type="radio" id="vehicleyes" name="vehicleyes" value="Yes">
             <span class="rbcheck"></span>
             <label style="padding-left: 10px">No</label>
-            <input type="radio" id="vehicleno" name="vehicle" value="No">
+            <input type="radio" id="vehicleno" name="vehicleno" value="No">
             <span class="rbcheck"></span><br><br>
 
         <label class="">Do you have a valid driver's license:</label><br>
             <label style="padding-left: 10px">Yes</label>           
-            <input type="radio" id="dlyes" name="dl" value="Yes">
+            <input type="radio" id="dlyes" name="dlyes" value="Yes">
             <span class="rbcheck"></span>
             <label style="padding-left: 10px">No</label>
-            <input type="radio" id="dlno" name="dl" value="No">
+            <input type="radio" id="dlno" name="dlno" value="No">
             <span class="rbcheck"></span><br><br>
 
         <label class="tmisc" for="dl">What is your driver's license number:</label>
@@ -723,12 +718,12 @@
     <fieldset>
         <legend><b>Military Experience Field:*</b></legend>
 
-        <label class="">Have you ever serve in the U.S. military:</label><br>
+        <label class="">Have you ever served in the U.S. military:</label><br>
             <label style="padding-left: 10px">Yes</label>           
-            <input type="radio" id="militaryyes" name="military" value="Yes">
+            <input type="radio" id="militaryyes" name="militaryyes" value="Yes">
             <span class="rbcheck"></span>
             <label style="padding-left: 10px">No</label>
-            <input type="radio" id="militaryno" name="military" value="No">
+            <input type="radio" id="militaryno" name="militaryno" value="No">
             <span class="rbcheck"></span><br><br>
 
         <label class="">Branch Served:</label>
@@ -736,25 +731,25 @@
                 <tr>
                     <td class="td2">
                         <label class="table2">Army</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxmil[]" id="army" value="Army">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
                     <td class="td2">
                         <label class="table2">Navy</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxmil[]" id="navy" value="Navy">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
                     <td class="td2">
                         <label class="table2">Marine Corps</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxmil[]" id="marine" value="Marine">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
                     <td class="td2">
                         <label class="table2">Air Force</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxmil[]" id="airforce" value="AirForce">
                             <span class="cbcheck"></span>
                         </label>
                     </td>    
@@ -762,19 +757,19 @@
                 <tr>
                     <td class="td2">
                         <label class="table2">Coast Guard</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxmil[]" id="coast" value="Coast">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
                     <td class="td2">
                         <label class="table2">National Guard</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxmil[]" id="guard" value="Guard">
                             <span class="cbcheck"></span>
                         </label>
                     </td>
                     <td class="td2">
                         <label class="table2">Did Not Serve</a>
-                            <input type="checkbox">
+                            <input type="checkbox" name="chkboxmil[]" id="not" value="Not">
                             <span class="cbcheck"></span>
                         </label>
                     </td>   
@@ -837,10 +832,10 @@
                     </p><br>
                 
                 <label style="padding-left: 10px">I agree</label>           
-                    <input type="radio" id="agreeyes" name="agree" value="I Agree">
+                    <input type="radio" id="agreeyes" name="agreeyes" value="I Agree">
                     <span class="rbcheck"></span>
                 <label style="padding-left: 10px">I Do Not Agree</label>
-                    <input type="radio" id="agreeno" name="agree" value="I Do Not Agree">
+                    <input type="radio" id="agreeno" name="agreeno" value="I Do Not Agree">
                     <span class="rbcheck"></span><br>          
                 
             </fieldset><br><br>
@@ -852,6 +847,7 @@
         </form> 
         
         <br><br>
+    </div>
 
     </body>
 </html>
