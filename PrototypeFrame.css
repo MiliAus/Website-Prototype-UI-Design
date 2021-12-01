@@ -157,10 +157,7 @@ a.anchor {
   top: -100px; /* this is your offset */
   visibility: hidden;
 }
-.asterisk{
-    content:" *";
-    color: red;
-}
+
 label[for="afirst"]:after,[for="alast"]:after,[for="astreet"]:after,[for="primary"]:after,[for="aemail"]:after,[for="higered"]:after,[for="degrees"]:after,[for="dlstate"]:after,[for="estreet"]:after{
     content:" *";
     color: red;

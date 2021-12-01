@@ -9,6 +9,7 @@ function setDate() {                   //Function works and is complete
 
 setDate();  
 
+
 function validateForm() {
 	
 	var valid;
@@ -373,6 +374,31 @@ function validateForm() {
 
 	return false;
 }
+
+
+
+
+function clickedyes(element){
+	document.getElementById(element).style.display ="contents";
+}
+
+function addwork(element,sect){
+	let workdiv = document.getElementById(element);
+	var section = document.getElementById(sect);
+	workdiv.appendChild(section.cloneNode(true));
+} 
+function clickedremove(element){
+	let el = document.getElementById(element);
+	if(el.childElementCount == 1){
+		document.getElementById(element).style.display ="none"; 
+	} 
+	else{
+		el.removeChild(el.lastElementChild);
+		}
+}
+
+
+
 
 
 

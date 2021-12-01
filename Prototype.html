@@ -306,8 +306,18 @@
         
 <h2><u>Work Experience Section</u></h2>
 <a class="anchor" id="we"></a>
+<fieldset>
+    <legend for="primary"><b>Do you have any work experience?</b></legend>
+              
+    <input type="button" id="work1" name="workyes" value="Add" onclick="clickedyes('work');">
+    <span class="rbcheck"></span>
 
-    <!-- Employer's Information -->
+</fieldset>
+
+
+<div id="work" style="display:none;">
+    <section id="main1">
+    <br><br><!-- Employer's Information -->
     <fieldset>
         <legend><b>Employer Information:</b></legend>
 
@@ -429,15 +439,27 @@
         <!-- Reason For Leaving  -->
             <label class="" for="leaving">Reason For Leaving:</label><br>
             <textarea id="leaving" name="leaving" placeholder="Explain Your Reason For Leaving" rows="4" cols="75"
-            maxlength="255"></textarea><br>
-        
+            maxlength="255"></textarea><br><br>
+            
+            <input id="addworking" type="button" name="button" value="Add" onclick="addwork('work','main1');"/> 
+            <input id="removework" type="button" name="button" value="Remove" onclick="clickedremove('work');"/>   
     </fieldset> <br>
-
+    </section>
+</div>
 
 <!-- ****************************  Education Experience Section  ********************************************************************************** -->      
 <h2><u>Education Experience Section</u></h2>
 <a class="anchor" id="ee"></a>
+<fieldset>
+    <legend for="primary"><b>Do you have any Education Experience?</b></legend>
+              
+    <input type="button" id="work1" name="workyes" value="Add" onclick="clickedyes('education');">
+    <span class="rbcheck"></span>
 
+</fieldset>
+
+<div id="education" style="display:none;">
+    <section id="main2">
     <!-- Highest Education Achieved -->
     <label style="padding-right: 10px" for="highest">Highest education you have achieved:</label>
     <select id="highest" name="highest"  >
@@ -533,7 +555,11 @@
     <label class="" for="degrees">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:</label><br>
     <textarea id="degrees" name="degrees" placeholder="Details of your educational achievements" rows="4" cols="75"
     maxlength="255"></textarea><br><br>
-            
+    
+    <input id="addworking" type="button" name="button" value="Add" onclick="addwork('education','main2');"/> 
+    <input id="removework" type="button" name="button" value="Remove" onclick="clickedremove('education');"/> 
+    </section>
+</div>
 
 <!-- ****************************  Miscellaneous Section  ********************************************************************************** -->   
            
