@@ -46,23 +46,23 @@
     <fieldset>
         <legend><b>Name:</b></legend>
         <label class="name" for="afirst">First Name:</label>
-        <input type="text" id="afirst" name="afirst" placeholder="First" maxlength="35" ><br><br>
+        <input type="text" id="afirst" name="afirst" placeholder="First" maxlength="35" value="John"><br><br>
 
         <label class="name" for="amiddle">Middle Name:</label>
         <input type="text" id="amiddle" name="amiddle" placeholder="Middle" maxlength="35"><br><br>
     
         <label class="name" for="alast">Last Name:</label>
-        <input type="text" id="alast" name="alast" placeholder="Last" maxlength="35" >
+        <input type="text" id="alast" name="alast" placeholder="Last" maxlength="35" value="Smith">
     </fieldset> <br>          
     
     <!-- Applicant Address -->
     <fieldset>
         <legend><b>Current Home Address:</b></legend>
         <label class="address" for="astreet">Street Address:</label>
-        <input type="text" id="astreet" name="astreet" placeholder="Street" maxlength="50" ><br><br>
+        <input type="text" id="astreet" name="astreet" placeholder="Street" maxlength="50" value="1000 Apple Street"><br><br>
     
         <label class="address" for="acity">City:</label>
-        <input type="text" id="acity" name="acity" placeholder="City" maxlength="35" ><br><br>
+        <input type="text" id="acity" name="acity" placeholder="City" maxlength="35" value="Jacksonville"><br><br>
 
         <label class="address" for="astate">State:</label>
         <select id="astate" name="astate" >
@@ -120,7 +120,7 @@
         </select><br><br>
     
         <label class="address" for="azip">ZIP:</label>
-        <input type="text" id="azip" name="azip" placeholder="ZIP" maxlength="5" ><br><br>
+        <input type="text" id="azip" name="azip" placeholder="ZIP" maxlength="5" value="32246"><br><br>
 
         <label class="">How long have you live at your current address:</label><br>
         <label style="padding-left: 10px; padding-right: 10px" for="ayears">Years:</label>
@@ -264,7 +264,7 @@
 
         <!-- Applicant Phone Numbers -->
         <label class="contact" for="primary">Primary Phone Number:</label>
-        <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" maxlength="14"  >
+        <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" maxlength="14"  value="9999999999">
         <br><br>
         <label class="" for="primarymobile">Check if this is a mobile number:</label>
         <input type="checkbox" id="primarymobile" name="primarymobile">
@@ -277,7 +277,7 @@
 
         <!-- Applicant Email -->
         <label class="contact" for="aemail">Email Address:</label>
-        <input type="text" id="aemail" name="aemail" placeholder="username@mail.com" maxlength="50"  >
+        <input type="text" id="aemail" name="aemail" placeholder="username@mail.com" maxlength="50"  value="a.b@gmail.com">
     </fieldset> <br>
 
     
@@ -297,7 +297,7 @@
 
         <!-- Desired Salary -->
         <label class="misc" for="salary">Desired Salary: $</label>
-        <input type="text" id="salary" name="salary" placeholder="Desired Salary" maxlength="7"  >
+        <input type="text" id="salary" name="salary" placeholder="Desired Salary" maxlength="7"  value="40000">
         <p class="position">Whole number only, no spaces or commas</p>
     </fieldset> <br>
 
@@ -323,14 +323,14 @@
 
         <!-- Employer Name -->
         <label class="eaddress" for="employer">Employer's Name:</label>
-        <input type="text" id="employer" name="employer" placeholder="Employer Name" maxlength="50"  ><br><br>
+        <input type="text" id="employer" name="employer" placeholder="Employer Name" maxlength="50"  value="Ruby Tuesday"><br><br>
 
         <!-- Employer Address -->
         <label class="eaddress" for="estreet">Employer's Address:</label>
-        <input type="text" id="estreet" name="estreet" placeholder="Employer's Street Address"  ><br><br>
+        <input type="text" id="estreet" name="estreet" placeholder="Employer's Street Address"  value="1000 Beach Blvd"><br><br>
     
         <label class="eaddress" for="ecity">City:</label>
-        <input type="text" id="ecity" name="ecity" placeholder="Employer's City"  ><br><br>
+        <input type="text" id="ecity" name="ecity" placeholder="Employer's City"  value="Jacksonville"><br><br>
 
         <label class="eaddress" for="estate">State:</label>
         <select id="estate" name="estate"  >
@@ -388,7 +388,7 @@
         </select><br><br>
     
         <label class="eaddress" for="employerzip">ZIP:</label>
-        <input type="text" id="employerzip" name="employerzip" placeholder="ZIP"  >              
+        <input type="text" id="employerzip" name="employerzip" placeholder="ZIP"  value="32246">              
     </fieldset> <br>
 
     <!-- Supervisor Information -->
@@ -396,15 +396,15 @@
         <legend><b>Supervior's Infromation</b></legend>
         <!-- Supervisor's Name -->
             <label class="sname" for="supervisor">Supervisor's Name:</label>
-            <input type="text" id="supervisor" name="supervisor" placeholder="Supervisor Name"  ><br><br>
+            <input type="text" id="supervisor" name="supervisor" placeholder="Supervisor Name"  value="Sally"><br><br>
 
         <!-- Supervisor's Phone Numbers -->
             <label class="sname" for="supervisorphone">Supervisor's Phone Number:</label>
-            <input type="text" id="supervisorphone" name="supervisorphone" placeholder="XXX-XXX-XXXX"  ><br><br>
+            <input type="text" id="supervisorphone" name="supervisorphone" placeholder="XXX-XXX-XXXX"  value="0000000000"><br><br>
 
         <!-- Supervisor's Email -->
             <label class="sname" for="supervisoremail">Supervisor's Email Address:</label>
-            <input type="text" id="supervisoremail" name="supervisoremail" placeholder="username@mail.com"  ><br><br>
+            <input type="text" id="supervisoremail" name="supervisoremail" placeholder="username@mail.com"  value="a.b@gmail.com"><br><br>
 
             <label>May we contact this supervisor:</label><br>
             <label style="padding-left: 10px">Yes</label>           
@@ -429,17 +429,17 @@
 
         <!-- Job Title -->
             <label class="employ" for="job">Job Title:</label>
-            <input type="text" id="job" name="job" placeholder="Job Title" maxlength="100" ><br><br>
+            <input type="text" id="job" name="job" placeholder="Job Title" maxlength="100" value="Cook"><br><br>
 
         <!-- Description of Duties and Responsibilities -->
             <label class="" for="duties">List Duties Performed, Skills Used, and Adancements and Promotions Earned:</label><br>
             <textarea id="duties" name="duties" placeholder="Details of your skills and experience" rows="4" cols="75"
-            maxlength="255"></textarea><br><br>
+            maxlength="255">To destroy the Jedi</textarea><br><br>
     
         <!-- Reason For Leaving  -->
             <label class="" for="leaving">Reason For Leaving:</label><br>
             <textarea id="leaving" name="leaving" placeholder="Explain Your Reason For Leaving" rows="4" cols="75"
-            maxlength="255"></textarea><br><br>
+            maxlength="255">All Jedi are eradicated</textarea><br><br>
             
             <input id="addworking" type="button" name="button" value="Add" onclick="addwork('work','main1');"/> 
             <input id="removework" type="button" name="button" value="Remove" onclick="clickedremove('work');"/>   
@@ -487,10 +487,10 @@
         </select><br><br>
 
         <label class="emisc" for="schoolname">School Name:</label>
-        <input type="text" id="schoolname" name="schoolname" placeholder="School Name"  ><br><br>
+        <input type="text" id="schoolname" name="schoolname" placeholder="School Name"  value="Local High School"><br><br>
 
         <label class="emisc" for="schoolcity">City:</label>
-        <input type="text" id="schoolcity" name="schoolcity" placeholder="City"  ><br><br>
+        <input type="text" id="schoolcity" name="schoolcity" placeholder="City"  value="Jacksonville"><br><br>
 
         <label class="emisc" for="schoolstate">State:</label>
         <select id="schoolstate" name="schoolstate"  >
@@ -548,13 +548,13 @@
         </select><br><br>
 
         <label class="emisc" for="major">Major or Degree:</label>
-        <input type="text" id="major" name="major" placeholder="Major or Degree"  >
+        <input type="text" id="major" name="major" placeholder="Major or Degree"  value="CS">
     </fieldset><br>
 
     <!-- Degrees and Certifications Earned  -->
     <label class="" for="degrees">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:</label><br>
-    <textarea id="degrees" name="degrees" placeholder="Details of your educational achievements" rows="4" cols="75"
-    maxlength="255"></textarea><br><br>
+    <textarea id="degrees" name="degrees" placeholder="Details of your educational achievements" value="None" rows="4" cols="75"
+    maxlength="255" >Bow Skills, Crossbows, Polearms, Maces</textarea><br><br>
     
     <input id="addworking" type="button" name="button" value="Add" onclick="addwork('education','main2');"/> 
     <input id="removework" type="button" name="button" value="Remove" onclick="clickedremove('education');"/> 
@@ -646,7 +646,7 @@
             <span class="rbcheck"></span><br><br>
 
         <label class="" for="hours">How many hours weekly can you work:</label>
-            <input type="text" id="hours" name="hours" placeholder="Weekly Hours" maxlength="3" >
+            <input type="text" id="hours" name="hours" placeholder="Weekly Hours" maxlength="3" value="40">
 
     </fieldset><br>
 
@@ -679,7 +679,7 @@
             <span class="rbcheck"></span><br><br>
 
         <label class="tmisc" for="dl">What is your driver's license number:</label>
-            <input type="text" id="dl" name="dl" placeholder="Driver's License Number"  ><br><br>
+            <input type="text" id="dl" name="dl" placeholder="Driver's License Number"  value="0000000000"><br><br>
         
         <label class="tmisc" for="dlstate">What state issued your driver's license number:</label>
             <select id="dlstate" name="dlstate"  >

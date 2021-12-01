@@ -12,6 +12,8 @@ setDate();
 
 function validateForm() {
 	
+	
+	
 	var valid;
 
 	/* *** Applicant Name ******************************************************************************************** */
@@ -209,6 +211,14 @@ function validateForm() {
     let duties = document.getElementById("duties");
     let leaving = document.getElementById("leaving");
 
+	console.log(sdate.value);
+
+	/* valid = validateDate(sdate, edate);
+    if (valid === false) {
+        alert("Sdate and Edate Test Worked");
+        return false; } */
+
+
     if (sdate.value == "") {
         alert("Start Date Not Selected");
         return false; }
@@ -372,7 +382,16 @@ function validateForm() {
         alert("Please Select 'I agree' to continue");
 		return false; }
 
+
+		valid = validateDate(sdate, edate);
+		if (valid === false) {
+			alert("Sdate and Edate Test Worked");
+			return false; } 
+
 	return false;
+
+	
+	
 }
 
 
@@ -491,6 +510,27 @@ function validateEmail(value) {
 
 
 
+function validateDate(start, end) {
+		sdate = start.value;
+		edate = end.value;
+	
+		alert("Sdate: " + sdate);
+		alert("Edate: " + edate);
+	
+		if (sdate == "") {
+			alert("Start Date Not elected");
+			return false; }
+	
+		if (edate == "") {
+			alert("End Date Not Selected");
+			return false; }
+	
+		if (sdate > edate) {
+			alert("Start Date must be before End date");
+			return false; }
+	
+		return true;
+} 
 
 
 
