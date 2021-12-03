@@ -20,9 +20,8 @@
             <a id="item" href="file:///C:\Users\Owner\Documents\GitHub\Website-Prototype-UI-Design/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a> <!-- Alex's Path -->
            <!--  <a id="item" href="file:///C:\Users\Owner\Documents\GitHub\Website-Prototype-UI-Design/Login.html" onclick="return confirm('Are you sure you want to Logout?');">Logout</a> --> <!-- Austin's Path -->
 </div>
-<br>
-<br>
-<br>
+<br><br><br>
+
 
 <form onSubmit="validateForm(); return false;">
 <div>
@@ -33,38 +32,38 @@
     then all fields in that section with an asterisk (*) are the only required fields in that section
     and must be filled in prior to submission.  Submission of an incomplete application will be considered
     disqualifying.
-</p> <br><br>
+</p> 
 
 <!-- Application Date -->
-<label class="date" for="application"><b>Date:</b></label>
-    <input disabled type="text" id="application" name="application"> <br><br>    
+<label class="date"><b>Application Date:</b></label>
+    <input disabled type="text" id="application" name="application"> <br> 
 
 <h2><u>Personal Information Section</u></h2>
 <a class="anchor" id="pi"></a>
 
     <!-- Applicant Name -->
     <fieldset>
-        <legend><b>Name:</b></legend>
-        <label class="name" for="afirst">First Name:</label>
+        <legend><b>Name</b></legend>
+        <label class="name" for="asterisk">First Name:</label>
         <input type="text" id="afirst" name="afirst" placeholder="First" maxlength="35" value="John"><br><br>
 
-        <label class="name" for="amiddle">Middle Name:</label>
+        <label class="name">Middle Name:</label>
         <input type="text" id="amiddle" name="amiddle" placeholder="Middle" maxlength="35"><br><br>
     
-        <label class="name" for="alast">Last Name:</label>
+        <label class="name" for="asterisk">Last Name:</label>
         <input type="text" id="alast" name="alast" placeholder="Last" maxlength="35" value="Smith">
     </fieldset> <br>          
     
     <!-- Applicant Address -->
     <fieldset>
-        <legend><b>Current Home Address:</b></legend>
-        <label class="address" for="astreet">Street Address:</label>
+        <legend for="asterisk"><b>Current Home Address</b></legend>
+        <label class="address">Street Address:</label>
         <input type="text" id="astreet" name="astreet" placeholder="Street" maxlength="50" value="1000 Apple Street"><br><br>
     
-        <label class="address" for="acity">City:</label>
+        <label class="address">City:</label>
         <input type="text" id="acity" name="acity" placeholder="City" maxlength="35" value="Jacksonville"><br><br>
 
-        <label class="address" for="astate">State:</label>
+        <label class="address">State:</label>
         <select id="astate" name="astate" >
             <option value="selectstate">Select a State</option>
             <option value="alabama">Alabama</option>
@@ -119,11 +118,11 @@
             <option value="wyoming">Wyoming</option>
         </select><br><br>
     
-        <label class="address" for="azip">ZIP:</label>
+        <label class="address">ZIP:</label>
         <input type="text" id="azip" name="azip" placeholder="ZIP" maxlength="5" value="32246"><br><br>
 
         <label class="">How long have you live at your current address:</label><br>
-        <label style="padding-left: 10px; padding-right: 10px" for="ayears">Years:</label>
+        <label style="padding-left: 10px; padding-right: 10px">Years:</label>
         <select id="ayears" name="ayears" >
             <option value="selectyears">Years</option>
             <option value="1">0</option>
@@ -229,7 +228,7 @@
 
         </select>
 
-        <label style="padding-left: 10px; padding-right: 10px" for="amonths">Months:</label>
+        <label style="padding-left: 10px; padding-right: 10px">Months:</label>
         <select id="amonths" name="amonths" required>
             <option value="selectmonths">Months</option>
             <option value="1">0</option>
@@ -249,7 +248,7 @@
 
     <!-- Minimum Age Requirement -->
     <fieldset>
-        <legend for="primary"><b>Are you at least 18 years of age:</b></legend>
+        <legend for="asterisk"><b>Are you at least 18 years of age</b></legend>
         <label class="rb">Yes</label>           
         <input type="radio" id="aage1" name="aage1" value="Yes">
         <span class="rbcheck"></span>
@@ -263,30 +262,30 @@
         <legend><b>Contact Information</b></legend>
 
         <!-- Applicant Phone Numbers -->
-        <label class="contact" for="primary">Primary Phone Number:</label>
+        <label class="contact" for="asterisk">Primary Phone Number:</label>
         <input type="text" id="primary" name="primary" placeholder="Primary [XXX-XXX-XXXX]" maxlength="14"  value="9999999999">
         <br><br>
-        <label class="" for="primarymobile">Check if this is a mobile number:</label>
+        <label class="">Check if this is a mobile number:</label>
         <input type="checkbox" id="primarymobile" name="primarymobile">
         <br><br>
 
-        <label class="contact" for="secondary">Secondary Phone Number:</label>
+        <label class="contact">Secondary Phone Number:</label>
         <input type="text" id="secondary" name="secondary" placeholder="Secondary [XXX-XXX-XXXX]" maxlength="14"><br><br>
-        <label class="" for="secondarymobile">Check if this is a mobile number:</label>
+        <label class="">Check if this is a mobile number:</label>
         <input type="checkbox" id="secondarymobile" name="secondarymobile"><br><br>
 
         <!-- Applicant Email -->
-        <label class="contact" for="aemail">Email Address:</label>
+        <label class="contact" for="asterisk">Email Address:</label>
         <input type="text" id="aemail" name="aemail" placeholder="username@mail.com" maxlength="50"  value="a.b@gmail.com">
     </fieldset> <br>
 
     
     <!-- Position Information-->
     <fieldset>
-        <legend><b>Position Applying For:</b></legend>
+        <legend for="asterisk"><b>Position Applying For</b></legend>
 
         <!-- Position -->
-        <label class="misc" for="position">Position:</label>
+        <label class="misc">Position:</label>
         <select id="position" name="position"  >
             <option value="selectposition">Select a Position</option>
             <option value="it">IT Specialist</option>
@@ -296,115 +295,110 @@
         </select><br><br>
 
         <!-- Desired Salary -->
-        <label class="misc" for="salary">Desired Salary: $</label>
+        <label class="misc">Desired Salary: $</label>
         <input type="text" id="salary" name="salary" placeholder="Desired Salary" maxlength="7"  value="40000">
         <p class="position">Whole number only, no spaces or commas</p>
     </fieldset> <br>
 
-
-<!-- ****************************  Work Experience Section  ********************************************************************************** -->   
-        
+<!-- ****************************  Work Experience Section  ********************************************************************************** -->    
 <h2><u>Work Experience Section</u></h2>
 <a class="anchor" id="we"></a>
 <fieldset>
-    <legend for="primary"><b>Do you have any work experience?</b></legend>
-              
-    <input type="button" id="work1" name="workyes" value="Add" onclick="clickedyes('work');">
+    <legend for="asterisk"><b>List your work experience</b></legend>              
+    <input type="button" id="work1" name="workyes" value="Add" onclick="clickedadd('work');">
     <span class="rbcheck"></span>
 
-</fieldset>
+    </fieldset>
+    <div id="work" style="display:none;">
+        <section id="main1">
+        <br><br><!-- Employer's Information -->
+        <fieldset>
+            <legend for="asterisk"><b>Employer Information</b></legend>
 
+            <!-- Employer Name -->
+            <label class="eaddress">Employer's Name:</label>
+            <input type="text" id="employer" name="employer" placeholder="Employer Name" maxlength="50"  value="Ruby Tuesday"><br><br>
 
-<div id="work" style="display:none;">
-    <section id="main1">
-    <br><br><!-- Employer's Information -->
-    <fieldset>
-        <legend><b>Employer Information:</b></legend>
-
-        <!-- Employer Name -->
-        <label class="eaddress" for="employer">Employer's Name:</label>
-        <input type="text" id="employer" name="employer" placeholder="Employer Name" maxlength="50"  value="Ruby Tuesday"><br><br>
-
-        <!-- Employer Address -->
-        <label class="eaddress" for="estreet">Employer's Address:</label>
-        <input type="text" id="estreet" name="estreet" placeholder="Employer's Street Address"  value="1000 Beach Blvd"><br><br>
+            <!-- Employer Address -->
+            <label class="eaddress">Employer's Address:</label>
+            <input type="text" id="estreet" name="estreet" placeholder="Employer's Street Address"  maxlength="50" value="1000 Beach Blvd"><br><br>
     
-        <label class="eaddress" for="ecity">City:</label>
-        <input type="text" id="ecity" name="ecity" placeholder="Employer's City"  value="Jacksonville"><br><br>
+            <label class="eaddress">City:</label>
+            <input type="text" id="ecity" name="ecity" placeholder="Employer's City"  value="Jacksonville" maxlength="35"><br><br>
 
-        <label class="eaddress" for="estate">State:</label>
-        <select id="estate" name="estate"  >
-            <option value="selectstate">Select a State</option>
-            <option value="alabama">Alabama</option>
-            <option value="alaska">Alaska</option>
-            <option value="arizona">Arizona</option>
-            <option value="arkansas">Arkansas</option>
-            <option value="california">California</option>
-            <option value="colorado">Colorado</option>
-            <option value="connecticut">Connecticut</option>
-            <option value="delaware">Delaware</option>
-            <option value="florida">Florida</option>
-            <option value="georgia">Georgia</option>
-            <option value="hawaii">Hawaii</option>
-            <option value="idaho">Idaho</option>
-            <option value="illinois">IllinoisFlorida</option>
-            <option value="indiana">Indiana</option>
-            <option value="iowa">Iowa</option>
-            <option value="kansas">Kansas</option>
-            <option value="kentucky">Kentucky</option>
-            <option value="louisiana">Louisiana</option>
-            <option value="maine">Maine</option>
-            <option value="maryland">Maryland</option>
-            <option value="massachusetts">Massachusetts</option>
-            <option value="michigan">Michigan</option>
-            <option value="minnesota">Minnesota</option>
-            <option value="mississippi">Mississippi</option>
-            <option value="missouri">Missouri</option>
-            <option value="montana">Montana</option>
-            <option value="nebraska">Nebraska</option>
-            <option value="nevada">Nevada</option>
-            <option value="newhampshire">New Hampshire</option>
-            <option value="newjersey">New Jersey</option>
-            <option value="newmexico">New Mexico</option>
-            <option value="newyork">New York</option>
-            <option value="northcarolina">North Carolina</option>
-            <option value="northdakota">North Dakota</option>
-            <option value="ohio">Ohio</option>
-            <option value="oklahoma">Oklahoma</option>
-            <option value="oregon">Oregon</option>
-            <option value="pennsylvania">Pennsylvania</option>
-            <option value="rhodeisland">Rhodeisland</option>
-            <option value="southcarolina">South Carolina</option>
-            <option value="southdakota">South Dakota</option>
-            <option value="tennessee">Tennessee</option>
-            <option value="texas">Texas</option>
-            <option value="utah">Utah</option>
-            <option value="vermont">Vermont</option>
-            <option value="virginia">Virginia</option>
-            <option value="washington">Washington</option>
-            <option value="westvirginia">West Virginia</option>
-            <option value="wisconsin">Wisconsin</option>
-            <option value="wyoming">Wyoming</option>
-        </select><br><br>
+            <label class="eaddress">State:</label>
+            <select id="estate" name="estate"  >
+                <option value="selectstate">Select a State</option>
+                <option value="alabama">Alabama</option>
+                <option value="alaska">Alaska</option>
+                <option value="arizona">Arizona</option>
+                <option value="arkansas">Arkansas</option>
+                <option value="california">California</option>
+                <option value="colorado">Colorado</option>
+                <option value="connecticut">Connecticut</option>
+                <option value="delaware">Delaware</option>
+                <option value="florida">Florida</option>
+                <option value="georgia">Georgia</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="idaho">Idaho</option>
+                <option value="illinois">IllinoisFlorida</option>
+                <option value="indiana">Indiana</option>
+                <option value="iowa">Iowa</option>
+                <option value="kansas">Kansas</option>
+                <option value="kentucky">Kentucky</option>
+                <option value="louisiana">Louisiana</option>
+                <option value="maine">Maine</option>
+                <option value="maryland">Maryland</option>
+                <option value="massachusetts">Massachusetts</option>
+                <option value="michigan">Michigan</option>
+                <option value="minnesota">Minnesota</option>
+                <option value="mississippi">Mississippi</option>
+                <option value="missouri">Missouri</option>
+                <option value="montana">Montana</option>
+                <option value="nebraska">Nebraska</option>
+                <option value="nevada">Nevada</option>
+                <option value="newhampshire">New Hampshire</option>
+                <option value="newjersey">New Jersey</option>
+                <option value="newmexico">New Mexico</option>
+                <option value="newyork">New York</option>
+                <option value="northcarolina">North Carolina</option>
+                <option value="northdakota">North Dakota</option>
+                <option value="ohio">Ohio</option>
+                <option value="oklahoma">Oklahoma</option>
+                <option value="oregon">Oregon</option>
+                <option value="pennsylvania">Pennsylvania</option>
+                <option value="rhodeisland">Rhodeisland</option>
+                <option value="southcarolina">South Carolina</option>
+                <option value="southdakota">South Dakota</option>
+                <option value="tennessee">Tennessee</option>
+                <option value="texas">Texas</option>
+                <option value="utah">Utah</option>
+                <option value="vermont">Vermont</option>
+                <option value="virginia">Virginia</option>
+                <option value="washington">Washington</option>
+                <option value="westvirginia">West Virginia</option>
+                <option value="wisconsin">Wisconsin</option>
+                <option value="wyoming">Wyoming</option>
+            </select><br><br>
     
-        <label class="eaddress" for="employerzip">ZIP:</label>
-        <input type="text" id="employerzip" name="employerzip" placeholder="ZIP"  value="32246">              
-    </fieldset> <br>
+            <label class="eaddress">ZIP:</label>
+            <input type="text" id="employerzip" name="employerzip" placeholder="ZIP" maxlength="5"  value="32246">              
+        </fieldset> <br>
 
-    <!-- Supervisor Information -->
-    <fieldset>
-        <legend><b>Supervior's Infromation</b></legend>
-        <!-- Supervisor's Name -->
-            <label class="sname" for="supervisor">Supervisor's Name:</label>
-            <input type="text" id="supervisor" name="supervisor" placeholder="Supervisor Name"  value="Sally"><br><br>
+        <!-- Supervisor Information -->
+        <fieldset>
+            <legend for="asterisk"><b>Supervior's Infromation</b></legend>
+            <!-- Supervisor's Name -->
+            <label class="sname">Supervisor's Name:</label>
+            <input type="text" id="supervisor" name="supervisor" placeholder="Supervisor Name"  maxlength="75"  value="Sally"><br><br>
 
         <!-- Supervisor's Phone Numbers -->
-            <label class="sname" for="supervisorphone">Supervisor's Phone Number:</label>
-            <input type="text" id="supervisorphone" name="supervisorphone" placeholder="XXX-XXX-XXXX"  value="0000000000"><br><br>
+            <label class="sname">Supervisor's Phone Number:</label>
+            <input type="text" id="supervisorphone" name="supervisor" placeholder="XXX-XXX-XXXX" maxlength="14" value="0000000000"><br><br>
 
         <!-- Supervisor's Email -->
-            <label class="sname" for="supervisoremail">Supervisor's Email Address:</label>
-            <input type="text" id="supervisoremail" name="supervisoremail" placeholder="username@mail.com"  value="a.b@gmail.com"><br><br>
+            <label class="sname">Supervisor's Email Address:</label>
+            <input type="text" id="supervisoremail" name="supervisoremail" placeholder="username@mail.com" maxlength= value="a.b@gmail.com"><br><br>
 
             <label>May we contact this supervisor:</label><br>
             <label style="padding-left: 10px">Yes</label>           
@@ -414,36 +408,35 @@
             <input type="radio" id="contact2" name="contact2" value="No">
             <span class="rbcheck"></span>
 
-    </fieldset> <br>
+        </fieldset> <br>
 
-    <fieldset>
-         <!-- Dates of Employment -->
-         <legend><b>Employment Information:</b></legend>
+        <fieldset>
+        <!-- Dates of Employment -->
+            <legend for="asterisk"><b>Employment Information</b></legend>
             <label>Dates of Employment:</label><br>
-            <label style="padding-left: 15px; padding-right: 15px" for="sdate">Start Date:</label>
+            <label style="padding-left: 15px; padding-right: 15px">Start Date:</label>
             <input type="date" id="sdate" name="sdate" min="1955-01-01" max="2021-12-31"><br><br>
 
-            <label style="padding-left: 15px; padding-right: 20px" for="edate">End Date:</label>
+            <label style="padding-left: 15px; padding-right: 20px">End Date:</label>
             <input type="date" id="edate" name="edate" min="1955-01-02" max="2022-01-01"> <br><br>
 
-
         <!-- Job Title -->
-            <label class="employ" for="job">Job Title:</label>
+            <label class="employ">Job Title:</label>
             <input type="text" id="job" name="job" placeholder="Job Title" maxlength="100" value="Cook"><br><br>
 
         <!-- Description of Duties and Responsibilities -->
-            <label class="" for="duties">List Duties Performed, Skills Used, and Adancements and Promotions Earned:</label><br>
+            <label class="">List Duties Performed, Skills Used, and Advancements and Promotions Earned:</label><br>
             <textarea id="duties" name="duties" placeholder="Details of your skills and experience" rows="4" cols="75"
             maxlength="255">To destroy the Jedi</textarea><br><br>
     
         <!-- Reason For Leaving  -->
             <label class="" for="leaving">Reason For Leaving:</label><br>
             <textarea id="leaving" name="leaving" placeholder="Explain Your Reason For Leaving" rows="4" cols="75"
-            maxlength="255">All Jedi are eradicated</textarea><br><br>
-            
-            <input id="addworking" type="button" name="button" value="Add" onclick="addwork('work','main1');"/> 
-            <input id="removework" type="button" name="button" value="Remove" onclick="clickedremove('work');"/>   
-    </fieldset> <br>
+            maxlength="255">All Jedi are eradicated</textarea><br>        
+ 
+    </fieldset><br>
+    <input id="addworking" type="button" name="button" value="Add" onclick="addwork('work','main1');"/> 
+    <input id="removework" type="button" name="button" value="Remove" onclick="clickedremove('work');"/>  
     </section>
 </div>
 
@@ -451,9 +444,9 @@
 <h2><u>Education Experience Section</u></h2>
 <a class="anchor" id="ee"></a>
 <fieldset>
-    <legend for="primary"><b>Do you have any Education Experience?</b></legend>
+    <legend for="asterisk"><b>List your educational experience</b></legend>
               
-    <input type="button" id="work1" name="workyes" value="Add" onclick="clickedyes('education');">
+    <input type="button" id="work1" name="workyes" value="Add" onclick="clickedadd('education');">
     <span class="rbcheck"></span>
 
 </fieldset>
@@ -461,7 +454,8 @@
 <div id="education" style="display:none;">
     <section id="main2">
     <!-- Highest Education Achieved -->
-    <label style="padding-right: 10px" for="highest">Highest education you have achieved:</label>
+    <br>
+    <label style="padding-right: 10px" for="asterisk">Highest education you have achieved:</label>
     <select id="highest" name="highest"  >
         <option value="selecthighest">Highest Education Achieved</option>
         <option value="1">GED</option>
@@ -475,8 +469,8 @@
 
     <!-- Education Career Field -->
     <fieldset>
-        <legend><b>Education Career Field:</b></legend>
-        <label class="emisc" for="highered">School Type:</label>
+        <legend for="asterisk"><b>Education Career Field</b></legend>
+        <label class="emisc">School Type:</label>
         <select id="highered" name="higered"  >
             <option value="selectschool">School Type</option>
             <option value="1">High School</option>
@@ -486,13 +480,13 @@
             <option value="5">Professional</option>
         </select><br><br>
 
-        <label class="emisc" for="schoolname">School Name:</label>
-        <input type="text" id="schoolname" name="schoolname" placeholder="School Name"  value="Local High School"><br><br>
+        <label class="emisc">School Name:</label>
+        <input type="text" id="schoolname" name="schoolname" placeholder="School Name" maxlenght="100" value="Local High School"><br><br>
 
-        <label class="emisc" for="schoolcity">City:</label>
-        <input type="text" id="schoolcity" name="schoolcity" placeholder="City"  value="Jacksonville"><br><br>
+        <label class="emisc">City:</label>
+        <input type="text" id="schoolcity" name="schoolcity" placeholder="City" maxlength="35" value="Jacksonville"><br><br>
 
-        <label class="emisc" for="schoolstate">State:</label>
+        <label class="emisc">State:</label>
         <select id="schoolstate" name="schoolstate"  >
             <option value="selectstate">Select a State</option>
             <option value="alabama">Alabama</option>
@@ -507,7 +501,7 @@
             <option value="georgia">Georgia</option>
             <option value="hawaii">Hawaii</option>
             <option value="idaho">Idaho</option>
-            <option value="illinois">IllinoisFlorida</option>
+            <option value="illinois">Illinois</option>
             <option value="indiana">Indiana</option>
             <option value="iowa">Iowa</option>
             <option value="kansas">Kansas</option>
@@ -547,12 +541,12 @@
             <option value="wyoming">Wyoming</option>
         </select><br><br>
 
-        <label class="emisc" for="major">Major or Degree:</label>
-        <input type="text" id="major" name="major" placeholder="Major or Degree"  value="CS">
+        <label class="emisc">Major or Degree:</label>
+        <input type="text" id="major" name="major" placeholder="Major or Degree" maxlength="50" value="CS">
     </fieldset><br>
 
     <!-- Degrees and Certifications Earned  -->
-    <label class="" for="degrees">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:</label><br>
+    <label class="" for="asterisk">List Diplomas, Degrees, Certifications, and Miscellaneous Training Earned:</label><br>
     <textarea id="degrees" name="degrees" placeholder="Details of your educational achievements" value="None" rows="4" cols="75"
     maxlength="255" >Bow Skills, Crossbows, Polearms, Maces</textarea><br><br>
     
@@ -568,10 +562,10 @@
 
     <!-- Workday Availability Field -->
     <fieldset>
-        <legend><b>Work Availability Field:</b></legend>
+        <legend for="asterisk"><b>Work Availability Field</b></legend>
 
         <!-- Available Start Date -->
-        <label class="" for="availdate">Date available to start:</label>
+        <label class="">Date available to start:</label>
         <input type="date" id="availdate" name="availdate" min="2021-01-01" max="2025-01-01"><br><br>
         
         <label class="">Days available to work:</label>
@@ -645,14 +639,16 @@
             <input type="radio" id="part" name="part" value="Part">
             <span class="rbcheck"></span><br><br>
 
-        <label class="" for="hours">How many hours weekly can you work:</label>
+        <label class="">How many hours weekly can you work:</label>
             <input type="text" id="hours" name="hours" placeholder="Weekly Hours" maxlength="3" value="40">
+            <p class="position">&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                &emsp;&ensp;Input a whole numbers less than 125</p>
 
     </fieldset><br>
 
     <!-- Tranportation Field -->
     <fieldset>
-        <legend><b>Transportation Field:</b></legend>
+        <legend for="asterisk"><b>Transportation Field</b></legend>
 
         <label class="">Do you have reliable transportation to work:</label><br>
             <label style="padding-left: 10px">Yes</label>           
@@ -678,71 +674,75 @@
             <input type="radio" id="dlno" name="dlno" value="No">
             <span class="rbcheck"></span><br><br>
 
-        <label class="tmisc" for="dl">What is your driver's license number:</label>
-            <input type="text" id="dl" name="dl" placeholder="Driver's License Number"  value="0000000000"><br><br>
+        <fieldset>
+            <legend><b style="color: red;">Complete if you answered 'Yes' to having a valid driver's license</b></legend>
+            <label class="tmisc">What is your driver's license number:</label>
+            <input type="text" id="dl" name="dl" placeholder="Driver's License Number" maxlength="50"  value="0000000000"><br><br>
         
-        <label class="tmisc" for="dlstate">What state issued your driver's license number:</label>
-            <select id="dlstate" name="dlstate"  >
-            <option value="selectstate">Select a State</option>
-            <option value="alabama">Alabama</option>
-            <option value="alaska">Alaska</option>
-            <option value="arizona">Arizona</option>
-            <option value="arkansas">Arkansas</option>
-            <option value="california">California</option>
-            <option value="colorado">Colorado</option>
-            <option value="connecticut">Connecticut</option>
-            <option value="delaware">Delaware</option>
-            <option value="florida">Florida</option>
-            <option value="georgia">Georgia</option>
-            <option value="hawaii">Hawaii</option>
-            <option value="idaho">Idaho</option>
-            <option value="illinois">IllinoisFlorida</option>
-            <option value="indiana">Indiana</option>
-            <option value="iowa">Iowa</option>
-            <option value="kansas">Kansas</option>
-            <option value="kentucky">Kentucky</option>
-            <option value="louisiana">Louisiana</option>
-            <option value="maine">Maine</option>
-            <option value="maryland">Maryland</option>
-            <option value="massachusetts">Massachusetts</option>
-            <option value="michigan">Michigan</option>
-            <option value="minnesota">Minnesota</option>
-            <option value="mississippi">Mississippi</option>
-            <option value="missouri">Missouri</option>
-            <option value="montana">Montana</option>
-            <option value="nebraska">Nebraska</option>
-            <option value="nevada">Nevada</option>
-            <option value="newhampshire">New Hampshire</option>
-            <option value="newjersey">New Jersey</option>
-            <option value="newmexico">New Mexico</option>
-            <option value="newyork">New York</option>
-            <option value="northcarolina">North Carolina</option>
-            <option value="northdakota">North Dakota</option>
-            <option value="ohio">Ohio</option>
-            <option value="oklahoma">Oklahoma</option>
-            <option value="oregon">Oregon</option>
-            <option value="pennsylvania">Pennsylvania</option>
-            <option value="rhodeisland">Rhodeisland</option>
-            <option value="southcarolina">South Carolina</option>
-            <option value="southdakota">South Dakota</option>
-            <option value="tennessee">Tennessee</option>
-            <option value="texas">Texas</option>
-            <option value="utah">Utah</option>
-            <option value="vermont">Vermont</option>
-            <option value="virginia">Virginia</option>
-            <option value="washington">Washington</option>
-            <option value="westvirginia">West Virginia</option>
-            <option value="wisconsin">Wisconsin</option>
-            <option value="wyoming">Wyoming</option>
-        </select><br><br>
+            <label class="tmisc">What state issued your driver's license number:</label>
+                <select id="dlstate" name="dlstate"  >
+                <option value="selectstate">Select a State</option>
+                <option value="alabama">Alabama</option>
+                <option value="alaska">Alaska</option>
+                <option value="arizona">Arizona</option>
+                <option value="arkansas">Arkansas</option>
+                <option value="california">California</option>
+                <option value="colorado">Colorado</option>
+                <option value="connecticut">Connecticut</option>
+                <option value="delaware">Delaware</option>
+                <option value="florida">Florida</option>
+                <option value="georgia">Georgia</option>
+                <option value="hawaii">Hawaii</option>
+                <option value="idaho">Idaho</option>
+                <option value="illinois">IllinoisFlorida</option>
+                <option value="indiana">Indiana</option>
+                <option value="iowa">Iowa</option>
+                <option value="kansas">Kansas</option>
+                <option value="kentucky">Kentucky</option>
+                <option value="louisiana">Louisiana</option>
+                <option value="maine">Maine</option>
+                <option value="maryland">Maryland</option>
+                <option value="massachusetts">Massachusetts</option>
+                <option value="michigan">Michigan</option>
+                <option value="minnesota">Minnesota</option>
+                <option value="mississippi">Mississippi</option>
+                <option value="missouri">Missouri</option>
+                <option value="montana">Montana</option>
+                <option value="nebraska">Nebraska</option>
+                <option value="nevada">Nevada</option>
+                <option value="newhampshire">New Hampshire</option>
+                <option value="newjersey">New Jersey</option>
+                <option value="newmexico">New Mexico</option>
+                <option value="newyork">New York</option>
+                <option value="northcarolina">North Carolina</option>
+                <option value="northdakota">North Dakota</option>
+                <option value="ohio">Ohio</option>
+                <option value="oklahoma">Oklahoma</option>
+                <option value="oregon">Oregon</option>
+                <option value="pennsylvania">Pennsylvania</option>
+                <option value="rhodeisland">Rhodeisland</option>
+                <option value="southcarolina">South Carolina</option>
+                <option value="southdakota">South Dakota</option>
+                <option value="tennessee">Tennessee</option>
+                <option value="texas">Texas</option>
+                <option value="utah">Utah</option>
+                <option value="vermont">Vermont</option>
+                <option value="virginia">Virginia</option>
+                <option value="washington">Washington</option>
+                <option value="westvirginia">West Virginia</option>
+                <option value="wisconsin">Wisconsin</option>
+                <option value="wyoming">Wyoming</option>
+            </select><br><br>
 
-        <label class="tmisc" for="dldate">Driver's License's Expiration Date:</label>
-            <input type="date" id="dldate" name="dldate" min="2000-01-01" max="2099-12-31">                
+            <label class="tmisc">Driver's License's Expiration Date:</label>
+            <input type="date" id="dldate" name="dldate" min="2000-01-01" max="2099-12-31">
+
+        </fieldset>                        
     </fieldset><br>
 
     <!-- Military Experience Field -->
     <fieldset>
-        <legend><b>Military Experience Field:</b></legend>
+        <legend for="asterisk"><b>Military Experience Field</b></legend>
 
         <label class="">Have you ever served in the U.S. military:</label><br>
             <label style="padding-left: 10px">Yes</label>           
@@ -751,8 +751,10 @@
             <label style="padding-left: 10px">No</label>
             <input type="radio" id="militaryno" name="militaryno" value="No">
             <span class="rbcheck"></span><br><br>
-
-        <label class="">Branch Served:</label>
+        
+        <fieldset>
+            <legend><b style="color: red;">Complete if you answered 'Yes' to having served in the U.S. military</b></legend>
+            <label class="">Branch Served:</label>
             <table class="table2">
                 <tr>
                     <td class="td2">
@@ -802,79 +804,78 @@
                 </tr>
             </table>
 
-        <label style="padding-right: 10px">How many total years did you serve:</label>
-        <select class="" id="served" name="served"  >
-            <option value="selectyears">Select Total Years</option>
-            <option value="1">0</option>
-            <option value="2">1</option>
-            <option value="3">2</option>
-            <option value="4">3</option>
-            <option value="5">4</option>
-            <option value="6">5</option>
-            <option value="7">6</option>
-            <option value="8">7</option>
-            <option value="9">8</option>
-            <option value="10">9</option>
-            <option value="11">10</option>
-            <option value="12">11</option>
-            <option value="13">12</option>
-            <option value="14">13</option>
-            <option value="15">14</option>
-            <option value="16">15</option>
-            <option value="17">16</option>
-            <option value="18">17</option>
-            <option value="19">18</option>
-            <option value="20">19</option>
-            <option value="21">20</option>
-            <option value="22">21</option>
-            <option value="23">22</option>
-            <option value="24">23</option>
-            <option value="25">24</option>
-            <option value="26">25</option>
-            <option value="27">26</option>
-            <option value="28">27</option>
-            <option value="29">28</option>
-            <option value="30">29</option>
-            <option value="31">30</option>
-            <option value="32">31+</option>
-        </select>               
+            <label style="padding-right: 10px">How many total years did you serve:</label>
+            <select class="" id="served" name="served"  >
+                <option value="selectyears">Select Total Years</option>
+                <option value="1">0</option>
+                <option value="2">1</option>
+                <option value="3">2</option>
+                <option value="4">3</option>
+                <option value="5">4</option>
+                <option value="6">5</option>
+                <option value="7">6</option>
+                <option value="8">7</option>
+                <option value="9">8</option>
+                <option value="10">9</option>
+                <option value="11">10</option>
+                <option value="12">11</option>
+                <option value="13">12</option>
+                <option value="14">13</option>
+                <option value="15">14</option>
+                <option value="16">15</option>
+                <option value="17">16</option>
+                <option value="18">17</option>
+                <option value="19">18</option>
+                <option value="20">19</option>
+                <option value="21">20</option>
+                <option value="22">21</option>
+                <option value="23">22</option>
+                <option value="24">23</option>
+                <option value="25">24</option>
+                <option value="26">25</option>
+                <option value="27">26</option>
+                <option value="28">27</option>
+                <option value="29">28</option>
+                <option value="30">29</option>
+                <option value="31">30</option>
+                <option value="32">31+</option>
+            </select><br><br> 
+            
+            <!-- Military Training  -->
+            <label class="">List any relevant military training and experience:</label><br>
+            <textarea id="training" name="training" placeholder="Details of your military training"  rows="4" cols="75"
+            maxlength="255" ></textarea><br>
+
+        </fieldset>                       
     </fieldset><br>
 
     <!-- Applicant Acknowledgement and Waiver Section  ******************************************************************************************************** -->
             <h2><u>Applicant Acknowledgement and Waiver Section</u></h2>
             <a class="anchor" id="aa"></a>
             <fieldset>
-                <legend for="read"><b>PLEASE READ CAREFULLY AND SELECT 'I AGREE'</b></legend>
+                <legend for="asterisk"><b>PLEASE READ CAREFULLY AND SELECT 'I AGREE'</b></legend>
                 <p>IN EXCHANGE FOR THE CONSIDERATION OF MY JOB APPLICATION BY UNFINISHED BUSINESS, I AGREE THAT:</p>
                 <p>A POSITION IS NOT A CONTRACT OF EMPLOYMENT. UNFINISHED BUSINESS MAY TERMINATE MY JOB AT ANY TIME FOR ANY REASON. ALSO, I UNDERSTAND THAT UNFINISHED BUSINESS MAY MAKE CHANGES TO BENEFITS AND POLICIES AT ANY TIME. I MUST HAVE WRITTEN PERMISSION BEFORE BEING HIRED, FIRED, OR QUITTING.
-    
-                    I CONSENT TO AN INVESTIGATION.  I PROMISE NOT TO LIE.  I AGREE THAT I CAN BE FIRED IF CAUGHT LYING. UNFINISHED BUSINESS CAN TALK TO MY FRIENDS AND FAMILY.  UNFINISHED BUSINESS WILL NOT BE HELD RESPONSIBLE FOR MY ACTIONS.
-                    
-                    I UNDERSTAND I CAN BE TESTED FOR DRUG USE BEFORE BEING HIRED.  I UNDERSTAND I CAN BE TESTED FOR DRUGS AFTER I AM HIRED.
-                    
-                    I CONSENT TO UNFINISHED BUSINESS PULLING MY CREDIT REPORT.  THEY CAN VERIFY I PAY MY BILLS ON TIME.
-                    
-                    I UNDERSTAND MY FIRST THREE MONTHS ARE CONDITIONAL.  IF UNFINISHED BUSINESS IS NOT HAPPY WITH MY PERFORMANCE, THEY MAY FIRE ME FOR ANY REASON.
+                    <ul>
+                        <li>I CONSENT TO AN INVESTIGATION.  I PROMISE NOT TO LIE.  I AGREE THAT I CAN BE FIRED IF CAUGHT LYING. UNFINISHED BUSINESS CAN TALK TO MY FRIENDS AND FAMILY.  UNFINISHED BUSINESS WILL NOT BE HELD RESPONSIBLE FOR MY ACTIONS.</li>
+                        <li>I UNDERSTAND I CAN BE TESTED FOR DRUG USE BEFORE BEING HIRED.  I UNDERSTAND I CAN BE TESTED FOR DRUGS AFTER I AM HIRED.</li>
+                        <li>I CONSENT TO UNFINISHED BUSINESS PULLING MY CREDIT REPORT.  THEY CAN VERIFY I PAY MY BILLS ON TIME.</li>
+                        <li>I UNDERSTAND MY FIRST THREE MONTHS ARE CONDITIONAL.  IF UNFINISHED BUSINESS IS NOT HAPPY WITH MY PERFORMANCE, THEY MAY FIRE ME FOR ANY REASON.</li>
+                      </ul> 
+                    I CONSENT TO AN INVESTIGATION.  I PROMISE NOT TO LIE.  I AGREE THAT I CAN BE FIRED IF CAUGHT LYING. UNFINISHED BUSINESS CAN TALK TO MY FRIENDS AND FAMILY.  UNFINISHED BUSINESS WILL NOT BE HELD RESPONSIBLE FOR MY ACTIONS. 
                     </p><br>
                 
                 <label style="padding-left: 10px">I agree</label>           
                     <input type="radio" id="agreeyes" name="agreeyes" value="I Agree">
-                    <span class="rbcheck"></span>
-                <label style="padding-left: 10px">I Do Not Agree</label>
-                    <input type="radio" id="agreeno" name="agreeno" value="I Do Not Agree">
-                    <span class="rbcheck"></span><br>          
+                    <span class="rbcheck"></span>        
                 
-            </fieldset><br><br>
-        
+            </fieldset><br><br>       
 
             <input type="submit" value="Submit">
             <input type="reset" value="Reset">
 
-        </form> 
-        
-        <br><br>
+        </form> <br><br>
     </div>
-
     </body>
 </html>
 <!-- SPACES -->

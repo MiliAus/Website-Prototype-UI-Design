@@ -1,23 +1,20 @@
 
-function setDate() {                   //Function works and is complete
+function setDate() { 
     const today = new Date();
     todays_date = today.toLocaleDateString();
 
-	document.getElementById("application").value = todays_date;
-
-}//end validateDate
+	document.getElementById("application").value = todays_date; }
 
 setDate();  
 
 
 function validateForm() {
-	
-	
-	
+
 	var valid;
 
 	/* *** Applicant Name ******************************************************************************************** */
 	let afirst = document.getElementById("afirst");
+	let amiddle = document.getElementById("amiddle");
 	let alast = document.getElementById("alast");
 	
 	if (afirst.value == "") {
@@ -26,6 +23,13 @@ function validateForm() {
 	
 	if (isNaN(afirst.value) == false) {
 		alert("Applicant's First Name must contain only letters");
+		return false; }
+	
+	if (amiddle.value != "") {
+		if (isNaN(amiddle.value) == false) {
+			alert("Applicant's Middle Name must contain only letters");
+			return false; } 
+		
 		return false; }
 	
 	if (alast.value == "") {
@@ -58,12 +62,12 @@ function validateForm() {
 	
 	valid = validateSelection(astate.selectedIndex); 
 	if (valid === false) {
-		alert("Select a State for Applicant's address");
+		alert("Applicant's State not selected");
 		return false; }
 	
     valid = validateZip(azip);
     if (valid === false) {
-        alert("Applicant ZIP must conatain only numbers and must be 5 numbers in length")
+        alert("Applicant ZIP must contain only numbers and must be 5 numbers in length")
         return false; }
     
 	
@@ -77,12 +81,12 @@ function validateForm() {
 		alert("Number of months Applicant has lived at current address not selected");
 		return false; }
 		
-	/* *** Appicant Age ************************************************************************************************* */	
+	/* *** Applicant Age ************************************************************************************************* */	
 	let age1 = document.getElementById("aage1");
 	let age2 = document.getElementById("aage2");
 
 	if ((ischecked(age1) == false) && (ischecked(age2) == false)) {
-        alert("Please select if you are at least 18 years of age or not");
+        alert("Response to Are you at least 18 years of age not selected");
 		return false; }
 
 	
@@ -97,7 +101,14 @@ function validateForm() {
     
 	valid = validatePhone(primary); 
 	if (valid === false) {
-		return false; }		
+		return false; }
+	
+	if (secondary.value != "") {
+		valid = validatePhone(secondary); 
+		if (valid === false) {
+			return false; }
+
+		return false; }
 	
 	if (aemail.value == "") {
 		alert("Applicant's Email address is missing");
@@ -105,16 +116,16 @@ function validateForm() {
 		
 	valid = validateEmail(aemail);
 	if (valid === false) {
-		alert("Applicant's Email address invalid");
+		alert("Applicant's Email address invalid, Enter a valid email address: Ex: username@gmail.com");
 		return false; }  
 
-    /* *** Postion and Salary ************************************************************************************************* */
+    /* *** Position and Salary ************************************************************************************************* */
     let position = document.getElementById("position");
     let salary = document.getElementById("salary");
 
     valid = validateSelection(position.selectedIndex); 
     if (valid === false) {
-        alert("Select a Position you are applying for");
+        alert("Position applying for not selected");
         return false; }
 	
 	if (salary.value == "") {
@@ -156,12 +167,12 @@ function validateForm() {
 	
 	valid = validateSelection(estate.selectedIndex); 
 	if (valid === false) {
-		alert("Select a State for Employer's address");
+		alert("Employer's state not selected");
 		return false; }
 	
     valid = validateZip(ezip);
     if (valid === false) {
-        alert("Employer ZIP must conatain only numbers and must be 5 numbers in length");
+        alert("Employer ZIP must contain only numbers and must be 5 numbers in length");
         return false; }
 	
 	/* *** Supervisor Name *********************************************************************************************** */
@@ -181,7 +192,7 @@ function validateForm() {
 	let semail = document.getElementById("supervisoremail");
 		
 	if (sphone.value == "") {
-		alert("Supervisor's Primary phone number is missing");
+		alert("Supervisor's phone number is missing");
 		return false; }    
 	
 	valid = validatePhone(sphone); 
@@ -194,14 +205,14 @@ function validateForm() {
 		
 	valid = validateEmail(semail);
 	if (valid === false) {
-		alert("Supervisor's Email address invalid");
+		alert("Supervisor's email address invalid, Enter a valid email address: Ex: username@gmail.com");
 		return false; }
 
 	let contact1 = document.getElementById("contact1");
 	let contact2 = document.getElementById("contact2");
 
 	if ((ischecked(contact1) == false) && (ischecked(contact2) == false)) {
-        alert("Please select if we can contact your last supervisor");
+        alert("Response to May we contact this employer not selected");
 		return false; }
 	
 	/* *** Employment ********************************************************************************************* */
@@ -211,13 +222,9 @@ function validateForm() {
     let duties = document.getElementById("duties");
     let leaving = document.getElementById("leaving");
 
-	console.log(sdate.value);
-
-	/* valid = validateDate(sdate, edate);
+	valid = validateDate(sdate, edate);
     if (valid === false) {
-        alert("Sdate and Edate Test Worked");
-        return false; } */
-
+        return false; }
 
     if (sdate.value == "") {
         alert("Start Date Not Selected");
@@ -226,19 +233,22 @@ function validateForm() {
     if (edate.value == "") {
         alert("End Date Not Selected");
         return false; }
+	
+	if (sdate.value === edate.value) {
+		alert("End date cannot be the same as Start date");
+		return false; }
 
     if (job.value == "") {
         alert("Job Title missing");
         return false; }
     
     if (duties.value == "") {
-        alert("Describe the duties you performed and skills you learned");
+        alert("Please list your duties, skills, promotions, and advancements in the field provided");
         return false; }
     
     if (leaving.value == "") {
-        alert("Explain your reason for leaving");
+        alert("Please explain your reasoning for leaving your last place of employment");
         return false; }
-
 	
 	/* *** Education ************************************************************************************************* */
 	var highest = document.getElementById("highest");
@@ -251,24 +261,24 @@ function validateForm() {
 
     valid = validateSelection(highest.selectedIndex); 
 	if (valid === false) {
-		alert("Select Highest Education Achieved");
+		alert("Select the highest educational level achieved");
 		return false; }
 
     valid = validateSelection(highered.selectedIndex); 
 	if (valid === false) {
-		alert("Select the School Type");
+		alert("School type not selected");
 		return false; }
 
     if (schoolname.value == "") {
-        alert("School Name missing");
+        alert("School name is missing");
         return false; }
 
     if (scity.value == "") {
-        alert("The School's City name is missing");
+        alert("School city is missing");
         return false; }
         
     if (isNaN(scity.value) == false) {
-        alert("The School's City must contain only letters");
+        alert("School city must contain only letters and spaces");
         return false; }
 
     valid = validateSelection(sstate.selectedIndex); 
@@ -301,7 +311,7 @@ function validateForm() {
 	let part = document.getElementById("part");
 
 	if ((ischecked(full) == false) && (ischecked(part) == false)) {
-        alert("Please select if we prefer full or part time work");
+        alert("Please select if you prefer full or part time work");
 		return false; }
 
     if (hours.value == "") {
@@ -342,84 +352,79 @@ function validateForm() {
     var dlstate = document.getElementById("dlstate");
     let dldate = document.getElementById("dldate");
 
-    if (dl.value == "") {
-        alert("Driver's License Number Missing");
-        return false; }
-
-    valid = validateSelection(dlstate.selectedIndex); 
-    if (valid === false) {
-        alert("Select the state that issued you your driver's license");
-        return false; }
+    if (ischecked(dlyes) == true) {
+		if (dl.value == "") {
+			alert("Driver's License Number Missing");
+			return false; }
+	
+		valid = validateSelection(dlstate.selectedIndex); 
+		if (valid === false) {
+			alert("Select the state that issued you your driver's license");
+			return false; }
+		
+		if (dldate.value == "") {
+			alert("Driver's License Expiration Date Not Selected");
+			return false; }	
+	}
     
-    if (dldate.value == "") {
-        alert("Driver's License Expiration Date Not Selected");
-        return false; }	
-    
-    /* *** Military ********************************************************************************************* */
-    
+    /* *** Military **************************************************************************************** */
 	let militaryyes = document.getElementById("militaryyes");
 	let militaryno = document.getElementById("militaryno");
+	var served = document.getElementById("served");
+	let training = document.getElementById("training");
 
 	if ((ischecked(militaryyes) == false) && (ischecked(militaryno) == false)) {
         alert("Please select if you ever served in the U.S. military");
 		return false; }
-
-	var served = document.getElementById("served");
-
-	valid = validateChkBoxMil();
-	if(valid === false) {
-		alert("Please select which branch of service(s) you served");
-		return false; }
+	
+	if (ischecked(militaryyes) == true) {
+		valid = validateChkBoxMil();
+		if(valid === false) {
+			alert("Please select which branch of service(s) you served");
+			return false; }
+		}
     
     valid = validateSelection(served.selectedIndex); 
     if (valid === false) {
         alert("Select how many years total you served in the military");
         return false; }
+	
+	if (training.value == "") {
+        alert("Provide details of your military experience");
+        return false; }
 
+	/* *** Acknowledgement and Waiver ****************************************************************** */
 	let agreeyes = document.getElementById("agreeyes");
 
 	if (ischecked(agreeyes) == false) {
-        alert("Please Select 'I agree' to continue");
+        alert("Select 'I agree' to submit your application");
+		return false; }
+	
+	if (ischecked(agreeyes) == true) {
+		alert("Application Submitted");
 		return false; }
 
-
-		valid = validateDate(sdate, edate);
-		if (valid === false) {
-			alert("Sdate and Edate Test Worked");
-			return false; } 
-
-	return false;
-
-	
-	
-}
+	return false; }
 
 
+function clickedadd(element) {
+	document.getElementById(element).style.display ="contents"; }
 
 
-function clickedyes(element){
-	document.getElementById(element).style.display ="contents";
-}
-
-function addwork(element,sect){
+function addwork(element,sect) {
 	let workdiv = document.getElementById(element);
 	var section = document.getElementById(sect);
-	workdiv.appendChild(section.cloneNode(true));
-} 
-function clickedremove(element){
+	workdiv.appendChild(section.cloneNode(true)); } 
+
+
+function clickedremove(element) {
 	let el = document.getElementById(element);
-	if(el.childElementCount == 1){
-		document.getElementById(element).style.display ="none"; 
-	} 
-	else{
-		el.removeChild(el.lastElementChild);
-		}
+	if(el.childElementCount == 1) {
+		document.getElementById(element).style.display ="none"; }
+
+	else {
+		el.removeChild(el.lastElementChild); }
 }
-
-
-
-
-
 
 function ischecked(value) {
 	if (value.checked == true) {
@@ -431,8 +436,8 @@ function ischecked(value) {
 function validateChkBoxWork() {
 	var chkBox = document.getElementsByName("chkboxwork[]");
 	var lenChkBox = chkBox.length;
-
 	var valid = false;
+
 	for(var i=0; i < lenChkBox; i++) {
 		if(chkBox[i].checked == true) {
 			valid = true;
@@ -443,6 +448,7 @@ function validateChkBoxWork() {
 		return false; }
 
 	return true; }
+
 
 function validateChkBoxMil() {
 	var chkBox = document.getElementsByName("chkboxmil[]");
@@ -492,7 +498,7 @@ function validatePhone(value) {
 		return false; }
 	
 	if (phone.length != 10) {
-		alert(value.name + " must be 10 numbers in length");
+		alert(value.name + " number invalid, must contain only numbers and be 10 numbers in length");
 		return false; }	
 
 	return true; }
@@ -508,17 +514,12 @@ function validateEmail(value) {
 	return true; }
 
 
-
-
 function validateDate(start, end) {
 		sdate = start.value;
 		edate = end.value;
 	
-		alert("Sdate: " + sdate);
-		alert("Edate: " + edate);
-	
 		if (sdate == "") {
-			alert("Start Date Not elected");
+			alert("Start Date Not Selected");
 			return false; }
 	
 		if (edate == "") {
@@ -529,8 +530,4 @@ function validateDate(start, end) {
 			alert("Start Date must be before End date");
 			return false; }
 	
-		return true;
-} 
-
-
-
+		return true; }

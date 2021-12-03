@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Oleo+Script&display=swap'); /*import style from google API */
 
 body {
-    background-color: #F6FCFF;
+    background-color: rgb(215, 223, 247);
 }
 
 .employ{
@@ -80,15 +80,14 @@ p.position:hover {
     font-size: 18px;
 }
 
-
 .table1 {
-	border: 1px solid white;
+	border: 1px solid rgb(215, 223, 247);;
 	border-collapse: collapse;
 	text-align: left;
 }
 
 .td1 {
-	border: 1px solid white;
+	border: 1px solid rgb(215, 223, 247);;
 	text-align: left;
     padding: 10px;
 }
@@ -99,7 +98,7 @@ label.table1 {
 }
 
 .td2 {
-	border: 1px solid white;
+	border: 1px solid rgb(215, 223, 247);;
 	text-align: left;
     padding: 10px;
 }
@@ -112,8 +111,9 @@ label.table2 {
 div {
     padding-left: 15px;
 }
-.table2{
-    border: 1px solid white;
+
+.table2 {
+    border: 1px solid rgb(215, 223, 247);;
 }
 
 /* NAVBAR CSS */
@@ -138,10 +138,12 @@ div {
   top: 0;
   width: 100%;
 }
+
 .navbar a:hover {
   background-color: #ddd;
   color: black;
 }
+
 .navbar #item {
   float: left;
   display: block;
@@ -151,6 +153,7 @@ div {
   text-decoration: none;
   font-size: 17px;
 }
+
 a.anchor {
   display: block;
   position: relative;
@@ -158,11 +161,12 @@ a.anchor {
   visibility: hidden;
 }
 
-label[for="afirst"]:after,[for="alast"]:after,[for="astreet"]:after,[for="primary"]:after,[for="aemail"]:after,[for="higered"]:after,[for="degrees"]:after,[for="dlstate"]:after,[for="estreet"]:after{
+label[for="asterisk"]:after {
     content:" *";
     color: red;
 }
-legend[for="18"]:after,[for="position"]:after,[for="employer"]:after,[for="supervisor"]:after,[for="employment"]:after,[for="ed"]:after,[for="work"]:after,[for="transport"]:after,[for="mil"]:after,[for="read"]:after{
+
+legend[for="asterisk"]:after {
     content:" *";
     color: red;
 }
